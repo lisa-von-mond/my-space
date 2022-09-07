@@ -26,7 +26,7 @@ desc={element.desc}
 pic={element.pic}
 spacer={element.spacer}
 link={element.link}
-id={element.title}
+key={element.title}
 />
 
 

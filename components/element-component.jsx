@@ -11,13 +11,13 @@ export function PrettyElement({title, desc, pic, spacer, link}){
     <Link href={`/${link}`}>
     <ElementFrame>
       
-        <ElementPic picname="clouds_one" currentpic={pic}>
+        <ElementPic picname="clouds_one" currentpic={pic} alt="clouds_two">
             <Image src={clouds_one}></Image>
         </ElementPic>
-        <ElementPic picname="clouds_two" currentpic={pic}>
+        <ElementPic picname="clouds_two" currentpic={pic} alt="clouds_two">
             <Image src={clouds_two}></Image>
         </ElementPic>
-        <ElementPic picname="clouds_three" currentpic={pic}>
+        <ElementPic picname="clouds_three" currentpic={pic} alt="clouds_two">
             <Image src={clouds_three}></Image>
         </ElementPic>
         <ElementTitle>{title}</ElementTitle>
