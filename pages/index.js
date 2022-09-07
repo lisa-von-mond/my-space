@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
-import { cardData } from '../../portfolio/card-data'
+import { cardData } from '../../space/card-data'
 import { PrettyElement } from '../components/element-component'
 
 
