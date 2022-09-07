@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
-import { cardData } from '../../space/card-data'
 import { PrettyElement } from '../components/element-component'
 
 
@@ -19,18 +18,7 @@ export default function Home() {
 
       <main className={styles.main}>
       
-{cardData.map((element)=>(
-<PrettyElement 
-title={element.title} 
-desc={element.desc}
-pic={element.pic}
-spacer={element.spacer}
-link={element.link}
-key={element.title}
-/>
-
-
-))}
+CONTENT WILL GO HERE
 
       </main>
 
