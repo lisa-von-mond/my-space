@@ -1,8 +1,10 @@
 import styled, {css} from "styled-components";
 import Image from "next/image";
-import clouds_one from "../public/clouds.jpg"
-import clouds_two from "../public/clouds_cyan.jpg"
-import clouds_three from "../public/clouds_pink.jpg"
+import mfc_teaser from "../public/mfc_TEASER.png"
+import fp_teaser from "../public/fp_TEASER.jpg"
+import rwsa_teaser from "../public/rwsa_TEASER.jpg"
+import lush_teaser from "../public/lush_TEASER.png"
+
 import Link from "next/link";
 
 export function PrettyElement({title, desc, pic, spacer, link}){
@@ -11,14 +13,17 @@ export function PrettyElement({title, desc, pic, spacer, link}){
     <Link href={`/${link}`}>
     <ElementFrame>
       
-        <ElementPic picname="clouds_one" currentpic={pic} alt="clouds_two">
-            <Image src={clouds_one}></Image>
+        <ElementPic picname="mfc_teaser" currentpic={pic} alt="mfc_teaser">
+            <Image src={mfc_teaser}></Image>
         </ElementPic>
-        <ElementPic picname="clouds_two" currentpic={pic} alt="clouds_two">
-            <Image src={clouds_two}></Image>
+        <ElementPic picname="fp_teaser" currentpic={pic} alt="fp_teaser">
+            <Image src={fp_teaser}></Image>
         </ElementPic>
-        <ElementPic picname="clouds_three" currentpic={pic} alt="clouds_two">
-            <Image src={clouds_three}></Image>
+        <ElementPic picname="rwsa_teaser" currentpic={pic} alt="rwsa_teaser">
+            <Image src={rwsa_teaser}></Image>
+        </ElementPic>
+        <ElementPic picname="lush_teaser" currentpic={pic} alt="lush_teaser">
+            <Image src={lush_teaser}></Image>
         </ElementPic>
         <ElementTitle>{title}</ElementTitle>
         <ElementDesc>{desc}</ElementDesc>
