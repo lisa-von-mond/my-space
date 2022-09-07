@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { Header } from '../components/header'
 
 
 export default function Home() {
@@ -12,17 +13,7 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <header className={styles.header}>
-      <div className={styles.lisa_wrapper}>LISA LU</div>
-      <div className={styles.filter_wrapper}>
-        
-          <li>graphic</li>
-          <li>illustration</li>
-          <li>layout</li>
-          <li>UI</li>
-        
-      </div>
-    </header>
+<Header/>
 
       <main className={styles.main}>
       
