@@ -33,7 +33,7 @@ export default function RauschendeWolken() {
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Rauschende Wolken, schöne Atome</h1>
           <p className={pstyles.project_text}>With the discourse of computational creativity, the so called AI is finding its way into the world of design. ut what does it mean to say, a computer is creative? <em>Rauschende Wolken, schöne Atome</em> &#091;swooshing clouds, beautiful atoms&#093; tries to deconstruct creativity system-theoretically.</p>
-          <p className={pstyles.project_text}>It's about finding the difference between what is and what we create, and what we can understand through systems; leaving known shapes and processes without getting lost. The result is an essay as well as a series of graphic system-based self-experiments. Exhiited 2016 at Gleishallen, Güterbahnhof Bremen.</p>
+          <p className={pstyles.project_text}>It is about finding the difference between what is and what we create, and what we can understand through systems; leaving known shapes and processes without getting lost. The result is an essay as well as a series of graphic system-based self-experiments. Exhiited 2016 at Gleishallen, Güterbahnhof Bremen.</p>
       </div>
       </div>
 
