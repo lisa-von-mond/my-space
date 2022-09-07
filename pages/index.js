@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-<Header/>
+      <Header/>
 
       <main className={styles.main}>
       
