@@ -1,19 +1,45 @@
 import styles from '../styles/Home.module.css'
+import { useState } from 'react'
+import styled, {css} from 'styled-components'
 
-export function Header(){
+export function Header({spaceFilter, setSpaceFilter}){
+
+function changeCurrentState(x){
+    setSpaceFilter(parseInt(x))
+}
+
+const currentState = spaceFilter
 
 return(
 
 <header className={styles.header}>
 <div className={styles.lisa_wrapper}>LISA LU</div>
 <div className={styles.filter_wrapper}>
-  
-    <li>graphic</li>
-    <li>illustration</li>
-    <li>layout</li>
-    <li>UI</li>
-  
+    <FilterItem state="0" current={currentState} onClick={() => changeCurrentState(0)}>all
+    </FilterItem>
+    <FilterItem state="1" current={currentState} onClick={() => changeCurrentState(1)}>graphic</FilterItem>
+    <FilterItem state="2" current={currentState} onClick={() => changeCurrentState(2)}>illustration</FilterItem>
+    <FilterItem state="3" current={currentState} onClick={() => changeCurrentState(3)}>layout</FilterItem>
+    <FilterItem state="4" current={currentState} onClick={() => changeCurrentState(4)}>UI</FilterItem>
 </div>
 </header>)
 
 }
+
+
+const FilterItem = styled.li`
+font-size: 1.5rem;
+cursor:pointer;
+
+&:hover{
+background:grey;
+color:white;
+}
+
+${props =>
+    props.state === props.current &&
+    css`
+     font-weight:500;
+    `}
+
+`

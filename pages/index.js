@@ -4,9 +4,16 @@ import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
 import { PrettyElement } from '../components/element-component'
 import { cardData } from '../card-data'
+import { useState } from 'react'
 
 
 export default function Home() {
+
+const [spaceFilter, setSpaceFilter] = useState(0)
+
+const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilter) === true))
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,11 +22,11 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <Header/>
+      <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter}/>
 
       <main className={styles.main}>
       
-      {cardData.map((element)=>(
+      {currentFilter.map((element)=>(
 <PrettyElement 
 title={element.title} 
 desc={element.desc}
