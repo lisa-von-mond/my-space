@@ -4,10 +4,11 @@ import mfc_teaser from "../public/mfc_TEASER.png"
 import fp_teaser from "../public/fp_TEASER.jpg"
 import rwsa_teaser from "../public/rwsa_TEASER.jpg"
 import lush_teaser from "../public/lush_TEASER.png"
-
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export function PrettyElement({title, desc, pic, spacer, link}){
+
 
     return(
     <Link href={`/${link}`}>
@@ -47,9 +48,16 @@ padding:1rem;
 margin-bottom:1rem;
 cursor:pointer;
 
+
 &:hover{
     transform:scale(105%);
     }
+
+${props =>
+    props.visible === false &&
+    css`
+    border:5px solid red;
+    `}
     
 `
 
