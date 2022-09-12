@@ -5,6 +5,7 @@ import fp_teaser from "../public/fp_TEASER.jpg"
 import rwsa_teaser from "../public/rwsa_TEASER.jpg"
 import lush_teaser from "../public/lush_TEASER.png"
 import kirindou_teaser from "../public/kirindou_TEASER.jpg"
+import empowerment_teaser from "../public/empowerment_TEASER.jpg"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -16,19 +17,22 @@ export function PrettyElement({title, desc, pic, spacer, link}){
     <ElementFrame>
       
         <ElementPic picname="mfc_teaser" currentpic={pic} alt="mfc_teaser">
-            <Image src={mfc_teaser}></Image>
+            <Image src={mfc_teaser} width="500" height="500"></Image>
         </ElementPic>
         <ElementPic picname="fp_teaser" currentpic={pic} alt="fp_teaser">
-            <Image src={fp_teaser}></Image>
+            <Image src={fp_teaser} width="500" height="500"></Image>
         </ElementPic>
         <ElementPic picname="rwsa_teaser" currentpic={pic} alt="rwsa_teaser">
-            <Image src={rwsa_teaser}></Image>
+            <Image src={rwsa_teaser} width="500" height="500"></Image>
         </ElementPic>
         <ElementPic picname="lush_teaser" currentpic={pic} alt="lush_teaser">
-            <Image src={lush_teaser}></Image>
+            <Image src={lush_teaser} width="500" height="500"></Image>
         </ElementPic>
         <ElementPic picname="kirindou_teaser" currentpic={pic} alt="kirindou_teaser">
-            <Image src={kirindou_teaser}></Image>
+            <Image src={kirindou_teaser} width="500" height="500"></Image>
+        </ElementPic>
+        <ElementPic picname="empowerment_teaser" currentpic={pic} alt="empowerment_teaser">
+            <Image src={empowerment_teaser} width="500" height="500"></Image>
         </ElementPic>
         <ElementTitle>{title}</ElementTitle>
         <ElementDesc>{desc}</ElementDesc>

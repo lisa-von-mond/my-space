@@ -29,5 +29,11 @@ export const cardData = [
     pic:"kirindou_teaser",
     cat:[0,1],
     link:"kirindou"},
+
+    {title:"empowerment",
+    desc:"logo",
+    pic:"empowerment_teaser",
+    cat:[0,1],
+    link:"empowerment"},
         
     ]

@@ -18,9 +18,8 @@ return(
     <FilterItem state="0" current={currentState} onClick={() => changeCurrentState(0)}>all
     </FilterItem>
     <FilterItem state="1" current={currentState} onClick={() => changeCurrentState(1)}>graphic</FilterItem>
-    <FilterItem state="2" current={currentState} onClick={() => changeCurrentState(2)}>illustration</FilterItem>
     <FilterItem state="3" current={currentState} onClick={() => changeCurrentState(3)}>layout</FilterItem>
-    <FilterItem state="4" current={currentState} onClick={() => changeCurrentState(4)}>UI</FilterItem>
+    <FilterItem state="4" current={currentState} onClick={() => changeCurrentState(4)}>web / UI</FilterItem>
 </div>
 </header>)
 
