@@ -4,6 +4,7 @@ import mfc_teaser from "../public/mfc_TEASER.png"
 import fp_teaser from "../public/fp_TEASER.jpg"
 import rwsa_teaser from "../public/rwsa_TEASER.jpg"
 import lush_teaser from "../public/lush_TEASER.png"
+import kirindou_teaser from "../public/kirindou_TEASER.jpg"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -25,6 +26,9 @@ export function PrettyElement({title, desc, pic, spacer, link}){
         </ElementPic>
         <ElementPic picname="lush_teaser" currentpic={pic} alt="lush_teaser">
             <Image src={lush_teaser}></Image>
+        </ElementPic>
+        <ElementPic picname="kirindou_teaser" currentpic={pic} alt="kirindou_teaser">
+            <Image src={kirindou_teaser}></Image>
         </ElementPic>
         <ElementTitle>{title}</ElementTitle>
         <ElementDesc>{desc}</ElementDesc>
