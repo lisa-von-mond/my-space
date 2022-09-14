@@ -25,6 +25,12 @@ h1{
   margin:0;
 }
 
+@keyframes fade {
+  0%{opacity:0;}
+  100%{opacity:100;}
+  
+}
+
 
 /* 
 @media (prefers-color-scheme: dark) {

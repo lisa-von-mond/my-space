@@ -29,10 +29,13 @@ return(
 const FilterItem = styled.li`
 font-size: 1.5rem;
 cursor:pointer;
+padding: 0.3rem;
+border-radius:0.2rem;
 
 &:hover{
-background:grey;
+background:black;
 color:white;
+
 }
 
 ${props =>
