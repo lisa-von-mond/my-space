@@ -20,7 +20,7 @@ export default function Kirindou() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={kirindou}></Image>
+        <Image src={kirindou} alt="kirindou"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Kirindou</h1>

@@ -20,7 +20,7 @@ export default function Kirindou() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={empowerment}></Image>
+        <Image src={empowerment} alt="empowerment logo"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Empowerment im Chemieunterricht / empowerment in chemistry lesson</h1>

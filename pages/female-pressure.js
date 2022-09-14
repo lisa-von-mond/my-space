@@ -23,7 +23,7 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={front}></Image>
+        <Image src={front} alt="open session flyer"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>open session</h1>
@@ -34,8 +34,8 @@ export default function RauschendeWolken() {
       </div>
 
       <div className={pstyles.gallery}>
-      <Image src={flyer} width="1000" height="500"></Image>
-      <Image src={back} width="350" height="500"></Image>
+      <Image src={flyer} width="1000" height="500" alt="open session flyer"></Image>
+      <Image src={back} width="350" height="500" alt="open session flyer"></Image>
     
       </div>
     

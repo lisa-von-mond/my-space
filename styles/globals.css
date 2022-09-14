@@ -6,7 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color:black;
   background-color:rgb(240, 238, 226);
 }
@@ -18,6 +18,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1{
+  padding:0;
+  margin:0;
 }
 
 

@@ -27,14 +27,13 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
       <main className={styles.main}>
       
       {currentFilter.map((element)=>(
-<PrettyElement 
-title={element.title} 
-desc={element.desc}
-pic={element.pic}
-spacer={element.spacer}
-link={element.link}
-key={element.title}
-/>))}
+          <PrettyElement 
+          title={element.title} 
+          desc={element.desc}
+          pic={element.pic}
+          spacer={element.spacer}
+          link={element.link}
+          key={element.title}/>))}
 
 
       </main>

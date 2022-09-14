@@ -29,12 +29,14 @@
   align-items: center;
   flex-wrap:wrap;
   z-index:99;
+  gap:2rem;
 }
 
 @media only screen and (min-width:800px){
 .main{
   padding:10rem;
-  max-height:150vh;
+  flex-direction:row;
+  width:100vw;
 }
 }
 
