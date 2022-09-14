@@ -20,7 +20,7 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={mfc} aöt="mfc_poster"></Image>
+        <Image src={mfc} alt="mfc_poster"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>My favourite chords</h1>

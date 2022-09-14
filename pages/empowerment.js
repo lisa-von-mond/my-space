@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import empowerment from "../public/empowerment.jpg"
+import kirindou from "../public/kirindou.jpg"
 import { SubPageHeader } from '../components/sub-page-header'
 
 export default function Kirindou() {
@@ -20,7 +20,7 @@ export default function Kirindou() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={empowerment} alt="empowerment logo"></Image>
+      <Image src={kirindou} alt="kirindou"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Empowerment im Chemieunterricht / empowerment in chemistry lesson</h1>
