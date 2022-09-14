@@ -54,13 +54,16 @@ width:100%;
 .gallery {
 display:flex;
 flex-wrap:wrap;
-gap:2rem;
+gap:4rem;
 }
 
 @media only screen and (min-width:1200px){
 
 .gallery {
-padding: 2rem;
+padding: 6rem;
+gap:6rem;
+align-items:center;
+justify-content:center;
 } 
 }
 

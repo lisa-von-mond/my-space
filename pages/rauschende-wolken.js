@@ -28,7 +28,7 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={rauschendewolken}></Image>
+        <Image src={rauschendewolken} alt="rauschende wolken poster"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Rauschende Wolken, schöne Atome</h1>
@@ -38,13 +38,11 @@ export default function RauschendeWolken() {
       </div>
 
       <div className={pstyles.gallery}>
-      <Image src={wolke} width="500" height="350"></Image>
-      <Image src={rinde} width="500" height="350"></Image>
-      <Image src={karogif} width="400" height="400"></Image>
-      <Image src={schnecke} width="400" height="400"></Image>
-      <Image src={karogif2} width="400" height="400"></Image>
-      <Image src={moos} width="500" height="350"></Image>
-      <Image src={schnecke2} width=" 400" height="400"></Image>
+      <Image src={wolke} width="500" height="350" alt="photo cloud"></Image>
+      <Image src={rinde} width="500" height="350" alt="photo tree"></Image>
+      <Image src={schnecke} width="400" height="400" alt="graphic slug"></Image>
+      <Image src={moos} width="500" height="350" alt="photo moola"></Image>
+      <Image src={schnecke2} width=" 400" height="400" alt="graphic slug"></Image>
       </div>
     
     </main>

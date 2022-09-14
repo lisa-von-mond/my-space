@@ -2,14 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import mfc from "../public/mfc_anthrazit.png"
+import kirindou from "../public/kirindou.jpg"
 import { SubPageHeader } from '../components/sub-page-header'
 
-export default function RauschendeWolken() {
+export default function Kirindou() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Empowerment</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
@@ -20,11 +20,11 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={mfc} alt="mfc_poster"></Image>
+      <Image src={kirindou} alt="kirindou"></Image>
       </div>
       <div className={pstyles.intro_text}>
-          <h1 className={pstyles.project_title}>My favourite chords</h1>
-          <p className={pstyles.project_text}>Poster for a concert event of the Hamburg Indie Label MFC</p>
+          <h1 className={pstyles.project_title}>Empowerment im Chemieunterricht / empowerment in chemistry lesson</h1>
+          <p className={pstyles.project_text}>Logo for research project in science didactics</p>
        </div>
       </div>
     
