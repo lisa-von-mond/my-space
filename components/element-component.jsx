@@ -7,13 +7,15 @@ import rwsa_teaser from "../public/rwsa_TEASER.png"
 import lush_teaser from "../public/lush_TEASER_sw.png"
 import kirindou_teaser from "../public/kirindou_TEASER_mono.png"
 import empowerment_teaser from "../public/empowerment_TEASER_mono.png"
+import utropic_disko_teaser from "../public/utropic_TEASER_mono.png"
+import lvm_teaser from "../public/lvm_TEASER_mono.png"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import { gridMatrix } from "../grid-matrix";
 
 
-export function PrettyElement({title, desc, pic, link, id, row, col, rowt, colt, border}){
+export function PrettyElement({title, desc, pic, link, border, lengthx, indexx}){
 
 const elementVariants = {
         offscreen: {
@@ -28,9 +30,21 @@ const elementVariants = {
       };
 
 
+
+
+    const thisElement = gridMatrix.find(element => element.idx === lengthx)
+    const thisMatrix = thisElement.matrix
+    const thisIndex = thisMatrix[indexx]
+    const colD = thisIndex.col
+    const rowD = thisIndex.row
+
+   
+ 
+        
+    
     return(
     <Link href={`/${link}`}>
-    <ElementFrame col={col} row={row} colt={colt} rowt={rowt} border={border}>
+    <ElementFrame cold={colD} rowd={rowD} border={border}>
    
         <ElementPic picname="mfc_teaser" currentpic={pic}>
             <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
@@ -50,6 +64,12 @@ const elementVariants = {
         <ElementPic picname="empowerment_teaser" currentpic={pic}>
             <Image src={empowerment_teaser} width="600" height="600" alt="empowerment_teaser"></Image>
         </ElementPic>
+        <ElementPic picname="utropic_disko_teaser" currentpic={pic}>
+            <Image src={utropic_disko_teaser} width="600" height="600" alt="u-tropic disko teaser"></Image>
+        </ElementPic>
+        <ElementPic picname="lvm_teaser" currentpic={pic}>
+            <Image src={lvm_teaser} width="600" height="600" alt="lisa von mond teaser"></Image>
+        </ElementPic>
         <ElementTextScroll as={motion.div}
         
             variants={elementVariants}
@@ -65,6 +85,7 @@ const elementVariants = {
         <ElementTextHover >
                 <ElementTitle>{title}</ElementTitle>
                 <ElementDesc>{desc}</ElementDesc>
+           
 
         </ElementTextHover>
      
@@ -87,8 +108,8 @@ width: 250px;
   position:relative;
   overflow:hidden;
   border-radius:50%;
-  grid-column: ${props=>props.col} / span 2;
-  grid-row: ${props=>props.row} / span 2;
+  grid-column: ${props=>props.cold} / span 2;
+  grid-row: ${props=>props.rowd} / span 2;
 
 @media only screen and (max-width:1200px){
     grid-column: ${props=>props.colt} / span 2;

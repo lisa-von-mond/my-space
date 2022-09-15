@@ -1,44 +1,145 @@
 export const gridMatrix = [
 
+{idx: 8,
+matrix: [
     {
-    id: 1,
     row:1,
-    column:1},
-
+    col:1},
     {
-    id: 2,
     row:3,
-    column:1},
-
+    col:1},
     {
-    id: 3,
     row:2,
-    column:2},
-
+    col:2},
     {
-    id: 4,
+    row:4,
+    col:2},
+    {
+    row:1,
+    col:3},
+    {
+    row:3,
+    col:3},
+    {
+    row:2,
+    col:4},
+    {
+    row:4,
+    col:4},
+    ]},
+
+{idx:7,
+matrix:[
+    {
+    row:1,
+    col:1},
+    {
+    row:3,
+    col:1},
+    {
+    row:2,
+    col:2},
+    {
     row:4,
     column:2},
-    
     {
-    id: 5,
     row:1,
-    column:3},
-
+    col:3},
     {
-    id: 6,
     row:3,
-    column:3},
-
+    col:3},
     {
-    id: 7,
     row:2,
-    column:4},
-    
+    col:4},
+    ]},
+
+{idx:6,
+matrix:[
     {
-    id: 8,
+    row:3,
+    col:1},
+    {
+    row:2,
+    col:2},
+    {
     row:4,
-    column:4},
+    col:2},
+    {
+    row:1,
+    col:3},
+    {
+    row:3,
+    col:3},
+    {
+    row:2,
+    col:4},
+    ]},
 
+{idx: 5,
+matrix:[
 
+    {
+    row:3,
+    col:1},
+    {
+    row:2,
+    col:2},
+    {
+    row:4,
+    col:2},
+    {
+    row:1,
+    col:3},
+    {
+    row:3,
+    col:3},
+    ]},
+
+{idx: 4,
+matrix:[
+
+    {
+    row:2,
+    col:2},
+    {
+    row:4,
+    col:2},
+    {
+    row:1,
+    col:3},
+    {
+    row:3,
+    col:3},
+    ]},
+
+{idx: 3,
+matrix: [
+    {
+    row:2,
+    col:2},
+    {
+    row:4,
+    col:2},
+    {
+    row:3,
+    col:3},
+    ]},
+
+{idx: 2,
+matrix:[
+    {
+    row:2,
+    col:2},
+    {
+    row:3,
+    col:3},
+    ]},
+
+{idx: 1,
+matrix:[
+    {
+    row:2,
+    col:2}
+    ]}
+    
     ]

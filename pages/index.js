@@ -65,19 +65,17 @@ const myvariants = {
 <div className={styles.outer_main}>
       <main className={styles.main}>
       
-      {currentFilter.map((element)=>(
+      {currentFilter.map((element, index)=>(
           <PrettyElement 
           title={element.title} 
           desc={element.desc}
           pic={element.pic}
           id={element.id}
-          row={element.row}
-          col={element.col}
-          rowt={element.rowt}
-          colt={element.colt}
           link={element.link}
           key={element.title}
-          border={element.border}/>))}
+          lengthx={currentFilter.length}
+          border={element.border}
+          indexx={index}/>))}
 
 
       </main>
