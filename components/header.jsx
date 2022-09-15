@@ -13,26 +13,28 @@ const currentState = spaceFilter
 return(
 
 <header className={styles.header}>
-<div className={styles.lisa_wrapper}>LISA LU</div>
-<div className={styles.filter_wrapper}>
+<Lisa>LISA LU</Lisa>
+<FilterMenu>
     <FilterItem state="0" current={currentState} onClick={() => changeCurrentState(0)}>all
     </FilterItem>
     <FilterItem state="1" current={currentState} onClick={() => changeCurrentState(1)}>graphic</FilterItem>
     <FilterItem state="3" current={currentState} onClick={() => changeCurrentState(3)}>layout</FilterItem>
     <FilterItem state="4" current={currentState} onClick={() => changeCurrentState(4)}>web / UI</FilterItem>
-</div>
+</FilterMenu>
 </header>)
 
 }
 
 
 const FilterItem = styled.li`
-font-size: 1.5rem;
 cursor:pointer;
+padding: 0.3rem;
+border-radius:0.2rem;
 
 &:hover{
-background:grey;
+background:black;
 color:white;
+
 }
 
 ${props =>
@@ -42,3 +44,70 @@ ${props =>
     `}
 
 `
+
+const Lisa = styled.h1`
+
+    width:100%;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    position:fixed;
+    top:1rem;
+    left:0;
+    letter-spacing: 0.3rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 0;
+    line-height: 2.2rem;
+
+@media only screen and (min-width:800px){
+  
+    width: 5rem;
+    font-size: 1.6rem;
+    position:fixed;
+    top:2rem;
+    left:2rem;
+    height:auto;
+    justify-content: flex-start;
+    }
+
+}`
+
+const FilterMenu = styled.div`
+
+    width:100%;
+    height: auto;
+    position:fixed;
+    top:5rem;
+    left:0;
+    font-size:1.6rem;
+    letter-spacing: 0.3rem;
+    font-weight: 400;
+    padding: 1rem;
+    list-style-type:none;
+    text-transform:uppercase;
+    display:flex;
+    flex-wrap:wrap;
+    gap: 0.3rem;
+    justify-content:space-between;
+
+    @media only screen and (min-width:800px){
+  
+    position:fixed;
+    width: 13rem;
+    left:auto;
+    right:2rem;
+    top:2rem;
+    padding: 0;
+    gap:0.3rem;
+    flex-direction:column;
+    align-items:flex-end;
+    flex-wrap:nowrap;
+        }
+    
+    
+    `
+
+
+
