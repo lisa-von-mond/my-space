@@ -1,18 +1,19 @@
 import styled, {css} from "styled-components";
 import styles from '../styles/Home.module.css'
 import Image from "next/image";
-import mfc_teaser from "../public/mfc_TEASER.png"
-import fp_teaser from "../public/fp_TEASER.jpg"
-import rwsa_teaser from "../public/rwsa_TEASER.jpg"
-import lush_teaser from "../public/lush_TEASER.png"
-import kirindou_teaser from "../public/kirindou_TEASER.jpg"
-import empowerment_teaser from "../public/empowerment_TEASER.jpg"
+import mfc_teaser from "../public/mfc_TEASER_mono.png"
+import fp_teaser from "../public/fp_TEASER.png"
+import rwsa_teaser from "../public/rwsa_TEASER.png"
+import lush_teaser from "../public/lush_TEASER_sw.png"
+import kirindou_teaser from "../public/kirindou_TEASER_mono.png"
+import empowerment_teaser from "../public/empowerment_TEASER_mono.png"
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
+import { gridMatrix } from "../grid-matrix";
 
 
-export function PrettyElement({title, desc, pic, spacer, link}){
+export function PrettyElement({title, desc, pic, link, id, row, col, rowt, colt, border}){
 
 const elementVariants = {
         offscreen: {
@@ -29,10 +30,10 @@ const elementVariants = {
 
     return(
     <Link href={`/${link}`}>
-    <ElementFrame>
-      
+    <ElementFrame col={col} row={row} colt={colt} rowt={rowt} border={border}>
+   
         <ElementPic picname="mfc_teaser" currentpic={pic}>
-            <Image src={mfc_teaser} width="800" height="800" alt="mfc_teaser"></Image>
+            <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
         </ElementPic>
         <ElementPic picname="fp_teaser" currentpic={pic}>
             <Image src={fp_teaser} width="600" height="600" alt="fp_teaser"></Image>
@@ -43,7 +44,7 @@ const elementVariants = {
         <ElementPic picname="lush_teaser" currentpic={pic}>
             <Image src={lush_teaser} width="600" height="600" alt="lush_teaser"></Image>
         </ElementPic>
-        <ElementPic picname="kirindou_teaser" currentpic={pic}>
+        <ElementPic picname="kirindou_teaser" currentpic={pic} className={styles.borderimage}>
             <Image src={kirindou_teaser} width="600" height="600" alt="kirindou_teaser"></Image>
         </ElementPic>
         <ElementPic picname="empowerment_teaser" currentpic={pic}>
@@ -64,6 +65,7 @@ const elementVariants = {
         <ElementTextHover >
                 <ElementTitle>{title}</ElementTitle>
                 <ElementDesc>{desc}</ElementDesc>
+
         </ElementTextHover>
      
     </ElementFrame>
@@ -72,26 +74,40 @@ const elementVariants = {
 
 
 const ElementFrame = styled.div`
-    
-min-width:150px;
-  max-width:20rem;
+height:250px;
+width: 250px;
   aspect-ratio:1;
   display:flex;
-  border-radius:100%;
   flex-direction:column;
   align-items:center;
   align-content:center;
   gap: 1rem;
   padding:1rem;
-  margin-bottom:1rem;
   cursor:pointer;
   position:relative;
   overflow:hidden;
-  
-  
+  border-radius:50%;
+  grid-column: ${props=>props.col} / span 2;
+  grid-row: ${props=>props.row} / span 2;
+
+@media only screen and (max-width:1200px){
+    grid-column: ${props=>props.colt} / span 2;
+    grid-row: ${props=>props.rowt} / span 2;
+}
+
 &:hover{
   filter: grayscale(0%);
-  }`
+  }
+  
+  ${props =>
+    props.border === true &&
+    css`
+    border: 2px solid black;
+    `}
+  
+  
+  
+  `
 
 const ElementTextScroll = styled.div`
   
@@ -106,11 +122,17 @@ const ElementTextScroll = styled.div`
     align-items:center;
     justify-content:center;
     gap:2rem;
-    background: rgba(0,0,0,0.5);
+    background: black;
 
 @media(hover:hover){
     display:none;
 }
+
+@media screen and (max-width:1000px){
+    gap:1rem;
+    }
+
+
 `
 
 const ElementTextHover = styled.div`
@@ -126,7 +148,7 @@ const ElementTextHover = styled.div`
     align-items:center;
     justify-content:center;
     gap:2rem;
-    background: rgba(0,0,0,0.5);
+    background: black;
     opacity:0;
 
 &:hover{
@@ -137,6 +159,10 @@ const ElementTextHover = styled.div`
 @media(hover:none){
     display:none;
 }
+
+@media screen and (max-width:1000px){
+    gap:1rem;
+    }
 `
 
 const ElementPic = styled.div`
@@ -151,11 +177,9 @@ ${props =>
       display:none;
     `}
 `
-const TextFrame = styled.div`
 
-`
 const ElementTitle = styled.h2`
-font-size:1.7rem;
+font-size:1.5rem;
 width:70%;
 font-weight:400;
 text-transform:uppercase;
@@ -163,11 +187,11 @@ color:white;
 text-align:center;
 
 @media screen and (max-width:1000px){
-font-size:0.8rem;
+font-size:0.9rem;
 }
 `
 const ElementDesc = styled.p`
-font-size:1.3rem;
+font-size:1.2rem;
 font-weight:300;
 width:70%;
 text-transform:uppercase;
@@ -177,7 +201,7 @@ text-align:center;
 color:white;
 
 @media only screen and (max-width:1000px){
-    font-size:0.3rem;
+    font-size:0.5rem;
 }
 `
 

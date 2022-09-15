@@ -8,8 +8,6 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-
-
 export default function Home() {
 
 const [spaceFilter, setSpaceFilter] = useState(0)
@@ -23,12 +21,16 @@ const myvariants = {
 
   return (
     <div className={styles.container}>
+
       <Head>
         <title>Create Next App</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
 
+      <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter}/>
+
+<BgContainer>
       <BGblue as={motion.div}
     variants={myvariants}
     animate={spaceFilter === 0 ? "one" : "two"}
@@ -47,11 +49,11 @@ const myvariants = {
     transition={{ duration: 2 }}>
       </BGgold>
 
-      <BGgrey as={motion.div}
+      <BGpurple as={motion.div}
     variants={myvariants}
     animate={spaceFilter === 3 ? "one" : "two"}
     transition={{ duration: 2 }}>
-      </BGgrey>
+      </BGpurple>
 
       <BGyellow as={motion.div}
     variants={myvariants}
@@ -59,8 +61,8 @@ const myvariants = {
     transition={{ duration: 2 }}>
       </BGyellow>
 
-      <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter}/>
-
+      </BgContainer>
+<div className={styles.outer_main}>
       <main className={styles.main}>
       
       {currentFilter.map((element)=>(
@@ -68,12 +70,18 @@ const myvariants = {
           title={element.title} 
           desc={element.desc}
           pic={element.pic}
-          spacer={element.spacer}
+          id={element.id}
+          row={element.row}
+          col={element.col}
+          rowt={element.rowt}
+          colt={element.colt}
           link={element.link}
-          key={element.title}/>))}
+          key={element.title}
+          border={element.border}/>))}
 
 
       </main>
+      </div>
 
       <footer className={styles.footer}>
   <p>CONTACT / ABOUT / LEGAL+PRIVACY</p>
@@ -83,64 +91,51 @@ const myvariants = {
   )
 }
 
+const BgContainer = styled.div`
+z-index: 1;`
 
 const BGpink = styled.div`
 height: 120vh;
 width:120vw;
-z-index:0;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: pink;
+background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
 `
 
 const BGblue = styled.div`
 height: 120vh;
 width:120vw;
-z-index:0;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: skyblue;
+background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 `
 
 const BGyellow = styled.div`
 height: 120vh;
 width:120vw;
-z-index:0;
 position:fixed;
 top:-10vh;
 left:-10vw;
 background: yellow;
+background-image: linear-gradient(120deg, white 0%, #f093fb 100%);
 `
 
-const BGgrey = styled.div`
+const BGpurple = styled.div`
 height: 120vh;
 width:120vw;
-z-index:0;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: lightgrey;
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 `
 
 const BGgold = styled.div`
 height: 120vh;
 width:120vw;
-z-index:0;
 position:fixed;
 top:-10vh;
 left:-10vw;
 background: goldenrod;
-`
-
-const SwitchButton = styled.div`
-height: 3rem;
-width: 3rem;
-position:fixed;
-top:20vh;
-left:20vw;
-background: white;
-bborder-radius: 50&;
-z-index: 50;
 `
