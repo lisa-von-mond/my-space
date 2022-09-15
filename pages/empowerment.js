@@ -3,7 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
 import kirindou from "../public/kirindou.jpg"
-import { SubPageHeader } from '../components/sub-page-header'
+import { Header } from '../components/header'
+import { BackButton } from '../components/Back-button'
 
 export default function Kirindou() {
   return (
@@ -14,7 +15,7 @@ export default function Kirindou() {
         <link rel="icon" href="" />
       </Head>
 
-        <SubPageHeader/>
+        <Header/>
 
     <main className={pstyles.project_main}>
 
@@ -25,6 +26,7 @@ export default function Kirindou() {
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>Empowerment im Chemieunterricht / empowerment in chemistry lesson</h1>
           <p className={pstyles.project_text}>Logo for research project in science didactics</p>
+          <BackButton/>
        </div>
       </div>
     

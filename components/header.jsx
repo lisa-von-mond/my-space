@@ -2,24 +2,19 @@ import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 import styled, {css} from 'styled-components'
 
-export function Header({spaceFilter, setSpaceFilter}){
+export function Header({spaceFilter, setSpaceFilter, menu}){
 
-function changeCurrentState(x){
-    setSpaceFilter(parseInt(x))
-}
-
-const currentState = spaceFilter
 
 return(
 
 <header className={styles.header}>
 <Lisa>LISA LU</Lisa>
-<FilterMenu>
-    <FilterItem state="0" current={currentState} onClick={() => changeCurrentState(0)}>all
+<FilterMenu menu={menu}>
+    <FilterItem state="1" current={spaceFilter} onClick={() => setSpaceFilter(1)}>all
     </FilterItem>
-    <FilterItem state="1" current={currentState} onClick={() => changeCurrentState(1)}>graphic</FilterItem>
-    <FilterItem state="3" current={currentState} onClick={() => changeCurrentState(3)}>layout</FilterItem>
-    <FilterItem state="4" current={currentState} onClick={() => changeCurrentState(4)}>web / UI</FilterItem>
+    <FilterItem state="2" current={spaceFilter} onClick={() => setSpaceFilter(2)}>graphic</FilterItem>
+    <FilterItem state="3" current={spaceFilter} onClick={() => setSpaceFilter(3)}>layout</FilterItem>
+    <FilterItem state="4" current={spaceFilter} onClick={() => setSpaceFilter(4)}>web / UI</FilterItem>
 </FilterMenu>
 </header>)
 
@@ -106,6 +101,11 @@ const FilterMenu = styled.div`
     flex-wrap:nowrap;
         }
     
+    ${props =>
+        props.menu !== true &&
+        css`
+        display:none;
+        `}
     
     `
 

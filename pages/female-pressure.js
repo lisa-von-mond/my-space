@@ -5,8 +5,8 @@ import pstyles from '../styles/Project.module.css'
 import flyer from "../public/flyer_os2.jpg"
 import front from "../public/flyer_os_front.jpg"
 import back from "../public/flyer_os_back.jpg"
-import Link from 'next/link'
-import { SubPageHeader } from '../components/sub-page-header'
+import { Header } from '../components/header'
+import { BackButton } from '../components/Back-button'
 
 export default function RauschendeWolken() {
   return (
@@ -16,8 +16,7 @@ export default function RauschendeWolken() {
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
-
-        <SubPageHeader/>
+        <Header/>
 
     <main className={pstyles.project_main}>
 
@@ -29,7 +28,7 @@ export default function RauschendeWolken() {
           <h1 className={pstyles.project_title}>open session</h1>
           <p className={pstyles.project_text}>Flyer for open session event of Hamburg female:pressure group</p>
           <p className={pstyles.project_text}>female:pressure is a worldwide network of and for FLINTA* persons in electronic music and visual arts, with the goal to achieve gender equality in areas, where men are still overrepresented. </p>
-  
+          <BackButton/>
       </div>
       </div>
 
@@ -45,6 +44,7 @@ export default function RauschendeWolken() {
   <p>CONTACT / ABOUT / LEGAL+PRIVACY</p>
   <p>@ 2022 Lisa Lu.</p>
       </footer>
+
     </div>
   )
 }
