@@ -29,22 +29,18 @@ const elementVariants = {
         }
       };
 
-
-
-
     const thisElement = gridMatrix.find(element => element.idx === lengthx)
     const thisMatrix = thisElement.matrix
     const thisIndex = thisMatrix[indexx]
-    const colD = thisIndex.col
-    const rowD = thisIndex.row
+    const colD = thisIndex.cold
+    const rowD = thisIndex.rowd
+    const colT = thisIndex.colt
+    const rowT = thisIndex.rowt
 
-   
- 
-        
-    
+
     return(
     <Link href={`/${link}`}>
-    <ElementFrame cold={colD} rowd={rowD} border={border}>
+    <ElementFrame cold={colD} rowd={rowD} colt={colT} rowt={rowT} border={border}>
    
         <ElementPic picname="mfc_teaser" currentpic={pic}>
             <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
@@ -85,8 +81,6 @@ const elementVariants = {
         <ElementTextHover >
                 <ElementTitle>{title}</ElementTitle>
                 <ElementDesc>{desc}</ElementDesc>
-           
-
         </ElementTextHover>
      
     </ElementFrame>

@@ -3,143 +3,215 @@ export const gridMatrix = [
 {idx: 8,
 matrix: [
     {
-    row:1,
-    col:1},
+    rowd:1,
+    cold:1,
+    rowt:1,
+    colt:1},
     {
-    row:3,
-    col:1},
+    rowd:3,
+    cold:1,
+    rowt:2,
+    colt:2},
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:3,
+    colt:1},
     {
-    row:4,
-    col:2},
+    rowd:4,
+    cold:2,
+    rowt:4,
+    colt:2},
     {
-    row:1,
-    col:3},
+    rowd:1,
+    cold:3,
+    rowt:5,
+    colt:1},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:6,
+    colt:2},
     {
-    row:2,
-    col:4},
+    rowd:2,
+    cold:4,
+    rowt:7,
+    colt:1},
     {
-    row:4,
-    col:4},
+    rowd:4,
+    cold:4,
+    rowt:8,
+    colt:2},
     ]},
 
 {idx:7,
 matrix:[
     {
-    row:1,
-    col:1},
+    rowd:1,
+    cold:1,
+    rowt:1,
+    colt:1},
     {
-    row:3,
-    col:1},
+    rowd:3,
+    cold:1,
+    rowt:2,
+    colt:2},
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:3,
+    colt:1},
     {
-    row:4,
-    column:2},
+    rowd:4,
+    cold:2,
+    rowt:4,
+    colt:2},
     {
-    row:1,
-    col:3},
+    rowd:1,
+    cold:3,
+    rowt:5,
+    colt:1},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:6,
+    colt:2},
     {
-    row:2,
-    col:4},
+    rowd:2,
+    cold:4,
+    rowt:7,
+    colt:1},
     ]},
 
 {idx:6,
 matrix:[
     {
-    row:3,
-    col:1},
+    rowd:3,
+    cold:1,
+    rowt:1,
+    colt:1},
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:2,
+    colt:2},
     {
-    row:4,
-    col:2},
+    rowd:4,
+    cold:2,
+    rowt:3,
+    colt:1},
     {
-    row:1,
-    col:3},
+    rowd:1,
+    cold:3,
+    rowt:4,
+    colt:2},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:5,
+    colt:1},
     {
-    row:2,
-    col:4},
+    rowd:2,
+    cold:4,
+    rowt:6,
+    colt:2},
     ]},
 
 {idx: 5,
 matrix:[
 
     {
-    row:3,
-    col:1},
+    rowd:3,
+    cold:1,
+    rowt:1,
+    colt:1},
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:2,
+    colt:2},
     {
-    row:4,
-    col:2},
+    rowd:4,
+    cold:2,
+    rowt:3,
+    colt:1},
     {
-    row:1,
-    col:3},
+    rowd:1,
+    cold:3,
+    rowt:4,
+    colt:2},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:5,
+    colt:1},
     ]},
 
 {idx: 4,
 matrix:[
 
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:1,
+    colt:1},
     {
-    row:4,
-    col:2},
+    rowd:4,
+    cold:2,
+    rowt:2,
+    colt:2},
     {
-    row:1,
-    col:3},
+    rowd:1,
+    cold:3,
+    rowt:3,
+    colt:1},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:4,
+    colt:2},
     ]},
 
 {idx: 3,
-matrix: [
+matrix:[
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:1,
+    colt:1},
     {
-    row:4,
-    col:2},
+    rowd:4,
+    cold:2,
+    rowt:2,
+    colt:2},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:3,
+    colt:1},
     ]},
 
 {idx: 2,
 matrix:[
     {
-    row:2,
-    col:2},
+    rowd:2,
+    cold:2,
+    rowt:1,
+    colt:1},
     {
-    row:3,
-    col:3},
+    rowd:3,
+    cold:3,
+    rowt:2,
+    colt:2},
     ]},
 
 {idx: 1,
 matrix:[
     {
-    row:2,
-    col:2}
+    rowd:2,
+    cold:2,
+    rowt:1,
+    colt:1}
     ]}
     
     ]

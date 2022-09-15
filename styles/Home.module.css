@@ -54,9 +54,9 @@
     height: 100rem;
     width:35rem;
     display: grid;
-    padding: 0;
-    grid-template-rows: repeat(3, 8rem);
-    grid-template-columns: repeat(10, 16rem);
+    padding: 5rem 0 0 0;
+    grid-template-rows: repeat(10, 8rem);
+    grid-template-columns: repeat(3, 16rem);
     gap: 2rem;
   }
   }
