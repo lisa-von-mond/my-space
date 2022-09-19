@@ -17,7 +17,7 @@ export default function Kirindou() {
 
       <Header/>
 
-    <main className={pstyles.project_main}>
+  <main className={pstyles.project_main}>
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
