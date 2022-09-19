@@ -1,24 +1,14 @@
 import styled, {css} from "styled-components";
-import styles from '../styles/Home.module.css'
-import Image from "next/image";
-import mfc_teaser from "../public/mfc_TEASER_mono.png"
-import fp_teaser from "../public/fp_TEASER.png"
-import rwsa_teaser from "../public/rwsa_TEASER.png"
-import lush_teaser from "../public/lush_TEASER_sw.png"
-import kirindou_teaser from "../public/kirindou_TEASER_mono.png"
-import empowerment_teaser from "../public/empowerment_TEASER_mono.png"
-import utropic_disko_teaser from "../public/utropic_TEASER_mono.png"
-import lvm_teaser from "../public/lvm_TEASER_mono.png"
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { gridMatrix } from "../grid-matrix";
 import { useState } from "react";
+import Image from "next/image";
 
 
 export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background, id}){
 
 const [isVisible, setIsVisible] = useState(false)
-
 
 const elementVariants = {
         offscreen: {
@@ -32,14 +22,11 @@ const elementVariants = {
         }
       };
 
-
 const thisElement = (gridMatrix.find(element => element.idx === lengthx)).matrix[indexx]
 const colD = thisElement.cold
 const rowD = thisElement.rowd
 const colT = thisElement.colt
 const rowT = thisElement.rowt
-
-
 
     return(
     <Link href={`/${link}`}>
@@ -48,31 +35,10 @@ const rowT = thisElement.rowt
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}>
 
-        <ElementPic picname="mfc_teaser" currentpic={pic}>
-            <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
+        <ElementPic>
+            <Image src={pic} width="600" height="600" alt="mfc_teaser"></Image>
         </ElementPic>
-        <ElementPic picname="fp_teaser" currentpic={pic}>
-            <Image src={fp_teaser} width="600" height="600" alt="fp_teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="rwsa_teaser" currentpic={pic}>
-            <Image src={rwsa_teaser} width="600" height="600" alt="rwsa_teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="lush_teaser" currentpic={pic}>
-            <Image src={lush_teaser} width="600" height="600" alt="lush_teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="kirindou_teaser" currentpic={pic} className={styles.borderimage}>
-            <Image src={kirindou_teaser} width="600" height="600" alt="kirindou_teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="empowerment_teaser" currentpic={pic}>
-            <Image src={empowerment_teaser} width="600" height="600" alt="empowerment_teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="utropic_disko_teaser" currentpic={pic}>
-            <Image src={utropic_disko_teaser} width="600" height="600" alt="u-tropic disko teaser"></Image>
-        </ElementPic>
-        <ElementPic picname="lvm_teaser" currentpic={pic}>
-            <Image src={lvm_teaser} width="600" height="600" alt="lisa von mond teaser"></Image>
-        </ElementPic>
-
+       
         <ElementTextScroll visible={isVisible} as={motion.div}
 
             background={background}
@@ -95,7 +61,6 @@ const rowT = thisElement.rowt
     </ElementFrame>
     </Link>)
 }
-
 
 const ElementFrame = styled.div`
 height:13rem;
@@ -136,9 +101,7 @@ width: 13rem;
     css`
     border: 2px solid black;
     `}
-
 `
-
 const ElementTextScroll = styled.div`
   
     position: absolute;
@@ -185,7 +148,6 @@ ${props =>
 `}
 
 `
-
 const ElementTextHover = styled.div`
   
 position: absolute;
@@ -235,23 +197,14 @@ ${props =>
     css`
     background: teal;
 `}
-
 `
-
 const ElementPic = styled.div`
 width:100%;
 height:100%;
 filter: grayscale(70%);
 border-radius: 100%;
 overflow:hidden;
-
-${props =>
-    props.picname !== props.currentpic &&
-    css`
-      display:none;
-    `}
 `
-
 const ElementTitle = styled.h2`
 font-size:1.5rem;
 font-weight:400;
@@ -286,6 +239,3 @@ ${props =>
     font-size:1.3rem;
 }
 `
-
-
-
