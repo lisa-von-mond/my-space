@@ -24,9 +24,9 @@ export default function Kirindou() {
         <Image src={kirindou} alt="kirindou"></Image>
       </div>
       <div className={pstyles.intro_text}>
-          <h1 className={pstyles.project_title}>Kirindou</h1>
-          <p className={pstyles.project_text}>Logo for mediation and conflict management startup</p>
-          <BackButton/>
+        <h1 className={pstyles.project_title}>Kirindou</h1>
+        <p className={pstyles.project_text}>Logo for mediation and conflict management startup</p>
+        <BackButton/>
     
        </div>
       </div>

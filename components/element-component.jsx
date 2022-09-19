@@ -29,13 +29,11 @@ const elementVariants = {
         }
       };
 
-    const thisElement = gridMatrix.find(element => element.idx === lengthx)
-    const thisMatrix = thisElement.matrix
-    const thisIndex = thisMatrix[indexx]
-    const colD = thisIndex.cold
-    const rowD = thisIndex.rowd
-    const colT = thisIndex.colt
-    const rowT = thisIndex.rowt
+    const thisElement = (gridMatrix.find(element => element.idx === lengthx)).matrix[indexx]
+    const colD = thisElement.cold
+    const rowD = thisElement.rowd
+    const colT = thisElement.colt
+    const rowT = thisElement.rowt
 
 
     return(
@@ -89,8 +87,8 @@ const elementVariants = {
 
 
 const ElementFrame = styled.div`
-height:250px;
-width: 250px;
+height:13rem;
+width: 13rem;
   aspect-ratio:1;
   display:flex;
   flex-direction:column;
@@ -105,9 +103,21 @@ width: 250px;
   grid-column: ${props=>props.cold} / span 2;
   grid-row: ${props=>props.rowd} / span 2;
 
+@media only screen and (min-width:1400px){
+    height:16rem;
+    width: 16rem;
+}
+
 @media only screen and (max-width:1200px){
+    height:16rem;
+    width: 16rem;
     grid-column: ${props=>props.colt} / span 2;
     grid-row: ${props=>props.rowt} / span 2;
+}
+
+@media only screen and (min-width:1600px){
+    height:20rem;
+    width: 20rem;
 }
 
 &:hover{
@@ -119,10 +129,8 @@ width: 250px;
     css`
     border: 2px solid black;
     `}
-  
-  
-  
-  `
+
+`
 
 const ElementTextScroll = styled.div`
   
@@ -146,8 +154,6 @@ const ElementTextScroll = styled.div`
 @media screen and (max-width:1000px){
     gap:1rem;
     }
-
-
 `
 
 const ElementTextHover = styled.div`
