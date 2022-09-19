@@ -39,6 +39,7 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           key={element.title}
           lengthx={currentFilter.length}
           border={element.border}
+          background={spaceFilter}
           indexx={index}/>))}
 
 

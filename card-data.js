@@ -23,8 +23,8 @@ export const cardData = [
     colt:2},
     
     {id:3,
-    title:"female:pressure session",
-    desc:"flyer",
+    title:"flyer for female:pressure event",
+    desc:null,
     pic:"fp_teaser",
     cat:[1,3],
     link:"female-pressure",
@@ -45,8 +45,8 @@ export const cardData = [
     colt:2},
 
     {id:5,
-    title:"kirindou",
-    desc:"logo",
+    title:"logo for mediation start-up",
+    desc:null,
     pic:"kirindou_teaser",
     cat:[1,2],
     link:"kirindou",
@@ -56,8 +56,8 @@ export const cardData = [
     colt:1,},
 
     {id: 6,
-    title:"empowerment",
-    desc:"logo",
+    title:"logo for didactis research project",
+    desc: null,
     pic:"empowerment_teaser",
     cat:[1,2],
     link:"empowerment",

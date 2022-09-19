@@ -10,12 +10,12 @@ import empowerment_teaser from "../public/empowerment_TEASER_mono.png"
 import utropic_disko_teaser from "../public/utropic_TEASER_mono.png"
 import lvm_teaser from "../public/lvm_TEASER_mono.png"
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import { gridMatrix } from "../grid-matrix";
 
 
-export function PrettyElement({title, desc, pic, link, border, lengthx, indexx}){
+export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background, id}){
+
 
 const elementVariants = {
         offscreen: {
@@ -29,17 +29,18 @@ const elementVariants = {
         }
       };
 
-    const thisElement = (gridMatrix.find(element => element.idx === lengthx)).matrix[indexx]
-    const colD = thisElement.cold
-    const rowD = thisElement.rowd
-    const colT = thisElement.colt
-    const rowT = thisElement.rowt
+const thisElement = (gridMatrix.find(element => element.idx === lengthx)).matrix[indexx]
+const colD = thisElement.cold
+const rowD = thisElement.rowd
+const colT = thisElement.colt
+const rowT = thisElement.rowt
 
 
     return(
     <Link href={`/${link}`}>
+    
     <ElementFrame cold={colD} rowd={rowD} colt={colT} rowt={rowT} border={border}>
-   
+
         <ElementPic picname="mfc_teaser" currentpic={pic}>
             <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
         </ElementPic>
@@ -65,6 +66,8 @@ const elementVariants = {
             <Image src={lvm_teaser} width="600" height="600" alt="lisa von mond teaser"></Image>
         </ElementPic>
         <ElementTextScroll as={motion.div}
+
+            background={background}
         
             variants={elementVariants}
             initial="offscreen"
@@ -72,15 +75,15 @@ const elementVariants = {
             viewport={{ once: false, amount: 1 }}
         
         >
-        <ElementTitle>{title}</ElementTitle>
-        <ElementDesc>{desc}</ElementDesc>
+            <ElementTitle>{title}</ElementTitle>
+            <ElementDesc desc={desc}>{desc}</ElementDesc>
         </ElementTextScroll>
 
-        <ElementTextHover >
-                <ElementTitle>{title}</ElementTitle>
-                <ElementDesc>{desc}</ElementDesc>
+        <ElementTextHover background={background}>
+            <ElementTitle>{title}</ElementTitle>
+            <ElementDesc desc={desc}>{desc}</ElementDesc>
         </ElementTextHover>
-     
+
     </ElementFrame>
     </Link>)
 }
@@ -94,12 +97,8 @@ width: 13rem;
   flex-direction:column;
   align-items:center;
   align-content:center;
-  gap: 1rem;
-  padding:1rem;
   cursor:pointer;
   position:relative;
-  overflow:hidden;
-  border-radius:50%;
   grid-column: ${props=>props.cold} / span 2;
   grid-row: ${props=>props.rowd} / span 2;
 
@@ -135,62 +134,108 @@ width: 13rem;
 const ElementTextScroll = styled.div`
   
     position: absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    border-radius:50%;
+    padding: 2rem;
+    width: auto;
+    height: auto;
+    top:-2rem;
+    right: 3rem;
+    border-radius:3rem;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:space-between;
     gap:2rem;
-    background: black;
+    background: blue;
+    opacity:0;
 
 @media(hover:hover){
     display:none;
 }
 
-@media screen and (max-width:1000px){
-    gap:1rem;
-    }
+${props =>
+    props.background === 1 &&
+    css`
+    background: teal;
+`}
+
+${props =>
+    props.background === 2 &&
+    css`
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+`}
+
+${props =>
+    props.background === 3 &&
+    css`
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+`}
+
+${props =>
+    props.background === 4 &&
+    css`
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+`}
+
 `
 
 const ElementTextHover = styled.div`
   
-    position: absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
-    border-radius:50%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:2rem;
-    background: black;
-    opacity:0;
+position: absolute;
+padding: 2rem;
+width: auto;
+height: auto;
+top:-2rem;
+right: 3rem;
+border-radius:3rem;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:space-between;
+gap:2rem;
+background: blue;
+opacity:0;
 
 &:hover{
     opacity:100;
-    animation: fade 2s;
+    animation: fade 1s;
 }
 
 @media(hover:none){
     display:none;
 }
 
-@media screen and (max-width:1000px){
-    gap:1rem;
-    }
+${props =>
+    props.background === 1 &&
+    css`
+    background: royalblue;
+`}
+
+${props =>
+    props.background === 2 &&
+    css`
+    background: darkviolet
+`}
+
+${props =>
+    props.background === 3 &&
+    css`
+    background: indigo;
+`}
+
+${props =>
+    props.background === 4 &&
+    css`
+    background: teal;
+`}
+
 `
 
 const ElementPic = styled.div`
-width:120%;
-height:120%;
-margin-top:-10%;
+width:100%;
+height:100%;
 filter: grayscale(70%);
+border-radius: 100%;
+overflow:hidden;
 
 ${props =>
     props.picname !== props.currentpic &&
@@ -201,28 +246,36 @@ ${props =>
 
 const ElementTitle = styled.h2`
 font-size:1.5rem;
-width:70%;
 font-weight:400;
 text-transform:uppercase;
 color:white;
 text-align:center;
+margin: 0;
+padding: 0;
 
-@media screen and (max-width:1000px){
-font-size:0.9rem;
+@media screen and (max-width:1400px){
+font-size:1.3rem;
 }
 `
 const ElementDesc = styled.p`
 font-size:1.2rem;
 font-weight:300;
-width:70%;
 text-transform:uppercase;
 padding:0;
 margin:0;
 text-align:center;
 color:white;
+margin: 0;
+padding: 0;
 
-@media only screen and (max-width:1000px){
-    font-size:0.5rem;
+${props =>
+    props.desc === null &&
+    css`
+      display:none;
+    `}
+
+@media only screen and (max-width:1400px){
+    font-size:1rem;
 }
 `
 

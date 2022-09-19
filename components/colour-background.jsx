@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
@@ -45,18 +44,8 @@ return(
 
 const BgContainer = styled.div`
 z-index: 1;
-background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-display:none;`
+background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);`
 
-
-const BGpink = styled.div`
-height: 120vh;
-width:120vw;
-position:fixed;
-top:-10vh;
-left:-10vw;
-background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-`
 
 const BGblue = styled.div`
 height: 120vh;
@@ -66,15 +55,13 @@ top:-10vh;
 left:-10vw;
 background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 `
-
-const BGcyan = styled.div`
+const BGpink = styled.div`
 height: 120vh;
 width:120vw;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: yellow;
-background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
 `
 
 const BGpurple = styled.div`
@@ -84,4 +71,12 @@ position:fixed;
 top:-10vh;
 left:-10vw;
 background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+`
+const BGcyan = styled.div`
+height: 120vh;
+width:120vw;
+position:fixed;
+top:-10vh;
+left:-10vw;
+background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
 `
