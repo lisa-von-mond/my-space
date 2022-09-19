@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
 import mfc from "../public/mfc_anthrazit.png"
 import { Header } from '../components/header'
-import { BackButton } from '../components/Back-button'
+import { BackButton } from '../components/back-button'
 
 export default function RauschendeWolken() {
   return (

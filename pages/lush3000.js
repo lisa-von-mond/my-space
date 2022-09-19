@@ -8,7 +8,7 @@ import lush3 from "../public/lush whole screen.png"
 import lush4 from "../public/lush console 1.png"
 import lush5 from "../public/lush console 2.png"
 import { Header } from '../components/header'
-import { BackButton } from '../components/Back-button'
+import { BackButton } from '../components/back-button'
 
 export default function RauschendeWolken() {
   return (

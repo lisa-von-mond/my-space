@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
 import kirindou from "../public/kirindou.jpg"
 import { Header } from '../components/header'
-import { BackButton } from '../components/Back-button'
+import { BackButton } from '../components/back-button'
 
 export default function Kirindou() {
   return (

@@ -6,7 +6,7 @@ import flyer from "../public/flyer_os2.jpg"
 import front from "../public/flyer_os_front.jpg"
 import back from "../public/flyer_os_back.jpg"
 import { Header } from '../components/header'
-import { BackButton } from '../components/Back-button'
+import { BackButton } from '../components/back-button'
 
 export default function RauschendeWolken() {
   return (

@@ -12,7 +12,7 @@ import karogif from "../public/karo4gif.gif"
 import karogif2 from "../public/karo4gif2.gif"
 import Link from 'next/link'
 import { Header } from '../components/header'
-import { BackButton } from '../components/Back-button'
+import { BackButton } from '../components/back-button'
 
 export default function RauschendeWolken() {
   return (
