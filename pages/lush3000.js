@@ -7,8 +7,8 @@ import lush2 from "../public/lush screenshot 2.png"
 import lush3 from "../public/lush whole screen.png"
 import lush4 from "../public/lush console 1.png"
 import lush5 from "../public/lush console 2.png"
-import Link from 'next/link'
-import { SubPageHeader } from '../components/sub-page-header'
+import { Header } from '../components/header'
+import { BackButton } from '../components/back-button'
 
 export default function RauschendeWolken() {
   return (
@@ -18,8 +18,7 @@ export default function RauschendeWolken() {
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
-
-        <SubPageHeader/>
+        <Header/>
 
     <main className={pstyles.project_main}>
 
@@ -32,7 +31,7 @@ export default function RauschendeWolken() {
           <p className={pstyles.project_text}>lush:3000 gives an understanding of coding-principles in a playful way. As environmental activist of the future, your task is shipping resources from planets to the next. Program your route in a way so that energy supplies are used consciously and the system will not crash.</p>
           <p className={pstyles.project_text}>The game is my capstone project of neue fische web development bootcamp, that I absolved 2022.</p>
           <a href="https://lush3000.vercel.app" target="blank" rel="noopener"><p className={pstyles.project_text}>see deployment here</p></a>
-       
+       <BackButton/>
       </div>
       </div>
 

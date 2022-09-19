@@ -175,17 +175,17 @@ matrix:[
 {idx: 3,
 matrix:[
     {
-    rowd:2,
+    rowd:1,
     cold:2,
     rowt:1,
     colt:1},
     {
-    rowd:4,
+    rowd:3,
     cold:2,
     rowt:2,
     colt:2},
     {
-    rowd:3,
+    rowd:2,
     cold:3,
     rowt:3,
     colt:1},
