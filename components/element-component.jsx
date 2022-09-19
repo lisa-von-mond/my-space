@@ -12,9 +12,12 @@ import lvm_teaser from "../public/lvm_TEASER_mono.png"
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { gridMatrix } from "../grid-matrix";
+import { useState } from "react";
 
 
 export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background, id}){
+
+const [isVisible, setIsVisible] = useState(false)
 
 
 const elementVariants = {
@@ -29,6 +32,7 @@ const elementVariants = {
         }
       };
 
+
 const thisElement = (gridMatrix.find(element => element.idx === lengthx)).matrix[indexx]
 const colD = thisElement.cold
 const rowD = thisElement.rowd
@@ -36,10 +40,13 @@ const colT = thisElement.colt
 const rowT = thisElement.rowt
 
 
+
     return(
     <Link href={`/${link}`}>
     
-    <ElementFrame cold={colD} rowd={rowD} colt={colT} rowt={rowT} border={border}>
+    <ElementFrame cold={colD} rowd={rowD} colt={colT} rowt={rowT} border={border}
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}>
 
         <ElementPic picname="mfc_teaser" currentpic={pic}>
             <Image src={mfc_teaser} width="600" height="600" alt="mfc_teaser"></Image>
@@ -65,7 +72,8 @@ const rowT = thisElement.rowt
         <ElementPic picname="lvm_teaser" currentpic={pic}>
             <Image src={lvm_teaser} width="600" height="600" alt="lisa von mond teaser"></Image>
         </ElementPic>
-        <ElementTextScroll as={motion.div}
+
+        <ElementTextScroll visible={isVisible} as={motion.div}
 
             background={background}
         
@@ -79,7 +87,7 @@ const rowT = thisElement.rowt
             <ElementDesc desc={desc}>{desc}</ElementDesc>
         </ElementTextScroll>
 
-        <ElementTextHover background={background}>
+        <ElementTextHover visible={isVisible} background={background}>
             <ElementTitle>{title}</ElementTitle>
             <ElementDesc desc={desc}>{desc}</ElementDesc>
         </ElementTextHover>
@@ -134,19 +142,19 @@ width: 13rem;
 const ElementTextScroll = styled.div`
   
     position: absolute;
-    padding: 2rem;
     width: auto;
     height: auto;
     top:-2rem;
     right: 3rem;
-    border-radius:3rem;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
-    gap:2rem;
+    gap:0.5rem;
     background: blue;
     opacity:0;
+    padding: 0.5rem;
+    border-radius:0.5rem;
 
 @media(hover:hover){
     display:none;
@@ -181,24 +189,24 @@ ${props =>
 const ElementTextHover = styled.div`
   
 position: absolute;
-padding: 2rem;
-width: auto;
-height: auto;
-top:-2rem;
+top:2rem;
 right: 3rem;
-border-radius:3rem;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:space-between;
-gap:2rem;
+gap:0.5rem;
 background: blue;
 opacity:0;
+padding: 0.5rem;
+border-radius:0.5rem;
 
-&:hover{
+${props =>
+    props.visible === true &&
+    css`
     opacity:100;
     animation: fade 1s;
-}
+    `}
 
 @media(hover:none){
     display:none;
@@ -258,7 +266,7 @@ font-size:1.3rem;
 }
 `
 const ElementDesc = styled.p`
-font-size:1.2rem;
+font-size:1.5rem;
 font-weight:300;
 text-transform:uppercase;
 padding:0;
@@ -275,7 +283,7 @@ ${props =>
     `}
 
 @media only screen and (max-width:1400px){
-    font-size:1rem;
+    font-size:1.3rem;
 }
 `
 
