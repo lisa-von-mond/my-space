@@ -32,11 +32,6 @@ export default function RauschendeWolken() {
       </div>
     
     </main>
-
-      <footer className={styles.footer}>
-  <p>CONTACT / ABOUT / LEGAL+PRIVACY</p>
-  <p>@ 2022 Lisa Lu.</p>
-      </footer>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import empowerment from "../public/empowerment.jpg"
+import empowerment from "../public/empowerment-logo.jpg"
 import { Header } from '../components/header'
 import { BackButton } from '../components/back-button'
 
@@ -31,11 +31,6 @@ export default function Kirindou() {
       </div>
     
     </main>
-
-      <footer className={styles.footer}>
-  <p>CONTACT / ABOUT / LEGAL+PRIVACY</p>
-  <p>@ 2022 Lisa Lu.</p>
-      </footer>
     </div>
   )
 }
