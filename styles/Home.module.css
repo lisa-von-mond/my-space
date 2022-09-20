@@ -8,7 +8,7 @@
   justify-content:center;}
 
 
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1000px){
 
   .outer_main{
   height:100vh;
@@ -38,44 +38,56 @@
     display: grid;
     padding: 5rem 0 3rem 0;
     grid-template-rows: repeat(10, 8rem);
-    grid-template-columns: repeat(3, 16rem);
+    grid-template-columns: repeat(2, 16rem);
     gap: 2rem;
   }
   }
 
-@media only screen and (min-width:1200px){
+@media only screen and (min-width:1000px){
 .main{
-    height: 36rem;
-    width:55rem;
+  height: 29rem;
+  width: 44rem;
     display: grid;
     padding: 0;
-    grid-template-rows: repeat(5, 6.5rem);
-    grid-template-columns: repeat(5, 13rem);
+    grid-template-rows: repeat(5, 5rem);
+    grid-template-columns: repeat(4, 10rem);
     gap: 1rem;
 }
 }
 
-@media only screen and (min-width:1400px){
+@media only screen and (min-width:1300px){
   .main{
-      height: 48rem;
-      width:70rem;
+      height: 34rem;
+      width: 51rem;
       display: grid;
       padding: 0;
-      grid-template-rows: repeat(5, 8rem);
-      grid-template-columns: repeat(5, 16rem);
+      grid-template-rows: repeat(5, 6rem);
+      grid-template-columns: repeat(4, 12rem);
+      gap: 1rem;
+  }
+  }
+
+@media only screen and (min-width:1600px){
+  .main{
+      height:43rem;
+      width: 62rem;
+      display: grid;
+      padding: 0;
+      grid-template-rows: repeat(5, 7rem);
+      grid-template-columns: repeat(4, 14rem);
       gap: 2rem;
   }
   }
 
 @media only screen and (min-width:1800px){
   .main{
-      height: 62rem;
-      width:89rem;
+    height:48rem;
+    width: 70rem;
       display: grid;
       padding: 0;
-      grid-template-rows: repeat(5, 10rem);
-      grid-template-columns: repeat(5, 20rem);
-      gap: 3rem;
+      grid-template-rows: repeat(5, 8rem);
+      grid-template-columns: repeat(4, 16rem);
+      gap: 2rem;
   }
   }
 

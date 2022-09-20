@@ -77,28 +77,32 @@ const ElementFrame = styled.div`
 
 
 @media only screen and (min-width:700px){
-    height:16rem;
-    width: 16rem;
+    height:14rem;
+    width: 14rem;
     grid-column: ${props=>props.colt} / span 2;
     grid-row: ${props=>props.rowt} / span 2;
 }
 
-@media only screen and (min-width:1200px){
-    height:13rem;
-    width: 13rem;
+@media only screen and (min-width:1000px){
+    height:10rem;
+    width: 10rem;
     grid-column: ${props=>props.cold} / span 2;
     grid-row: ${props=>props.rowd} / span 2;
 }
 
-@media only screen and (min-width:1400px){
-    height:16rem;
-    width: 16rem;
+@media only screen and (min-width:1300px){
+    height:12rem;
+    width: 12rem;
 }
 
+@media only screen and (min-width:1600px){
+    height:14rem;
+    width: 14rem;
+}
 
 @media only screen and (min-width:1800px){
-    height:20rem;
-    width: 20rem;
+    height:16rem;
+    width: 16rem;
 }
 
 `
