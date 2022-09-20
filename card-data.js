@@ -54,6 +54,6 @@ export const cardData = [
     desc:"website",
     pic:"/lvm_TEASER_mono.png",
     cat:[1,4],
-    link:"/"},
+    link:""},
         
     ]

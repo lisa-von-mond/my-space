@@ -16,7 +16,7 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
     <div className={styles.container}>
 
       <Head>
-        <title>Create Next App</title>
+        <title>Lisa Lu * portfolio</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
@@ -25,8 +25,6 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
   
-
-
 <div className={styles.outer_main}>
       <main className={styles.main}>
       {currentFilter.map((element, index)=>(
