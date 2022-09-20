@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-export function BackButton(){
+export function MyButton({link, text}){
 
 return(
-      <Link href="/" target="blank" rel="noopener">
-      <BackToStartButton>
-          back
-      </BackToStartButton>
+      <Link href={link} target="blank" rel="noopener">
+      <ThisButton>
+          {text}
+      </ThisButton>
       </Link>
 
 )
 }
 
-const BackToStartButton = styled.button`
+const ThisButton = styled.button`
 
   font-size:1.2rem;
   padding: 0.5rem;

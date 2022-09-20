@@ -40,11 +40,6 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           indexx={index}/>))}
       </main>
       </div>
-
-      <footer className={styles.footer}>
-  <p>CONTACT / ABOUT / LEGAL+PRIVACY</p>
-  <p>@ 2022 Lisa Lu.</p>
-      </footer>
     </div>
   )
 }
