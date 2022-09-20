@@ -26,19 +26,7 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
 
 <div className={styles.outer_main}>
       <main className={styles.main}>
-      
-      {currentFilter.map((element, index)=>(
-          <PrettyElement 
-          title={element.title} 
-          desc={element.desc}
-          pic={element.pic}
-          id={element.id}
-          link={element.link}
-          key={element.title}
-          lengthx={currentFilter.length}
-          border={element.border}
-          background={spaceFilter}
-          indexx={index}/>))}
+      HELLO
       </main>
       </div>
 
