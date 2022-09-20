@@ -62,8 +62,10 @@ return(
 }
 
 const ElementFrame = styled.div`
-height:13rem;
-width: 13rem;
+
+
+    height:13rem;
+    width: 13rem;
   aspect-ratio:1;
   display:flex;
   flex-direction:column;
@@ -71,35 +73,34 @@ width: 13rem;
   align-content:center;
   cursor:pointer;
   position:relative;
-  grid-column: ${props=>props.cold} / span 2;
-  grid-row: ${props=>props.rowd} / span 2;
 
-@media only screen and (min-width:1400px){
-    height:16rem;
-    width: 16rem;
-}
 
-@media only screen and (max-width:1200px){
+
+@media only screen and (min-width:700px){
     height:16rem;
     width: 16rem;
     grid-column: ${props=>props.colt} / span 2;
     grid-row: ${props=>props.rowt} / span 2;
 }
 
-@media only screen and (min-width:1600px){
+@media only screen and (min-width:1200px){
+    height:13rem;
+    width: 13rem;
+    grid-column: ${props=>props.cold} / span 2;
+    grid-row: ${props=>props.rowd} / span 2;
+}
+
+@media only screen and (min-width:1400px){
+    height:16rem;
+    width: 16rem;
+}
+
+
+@media only screen and (min-width:1800px){
     height:20rem;
     width: 20rem;
 }
 
-&:hover{
-  filter: grayscale(0%);
-  }
-  
-  ${props =>
-    props.border === true &&
-    css`
-    border: 2px solid black;
-    `}
 `
 const ElementTextScroll = styled.div`
   
@@ -113,7 +114,7 @@ const ElementTextScroll = styled.div`
     align-items:center;
     justify-content:space-between;
     gap:0.5rem;
-    background: blue;
+    background:black;
     opacity:0;
     padding: 0.5rem;
     border-radius:0.5rem;
@@ -205,20 +206,16 @@ border-radius: 100%;
 overflow:hidden;
 `
 const ElementTitle = styled.h2`
-font-size:1.5rem;
+font-size:0.7rem;
 font-weight:400;
 text-transform:uppercase;
 color:white;
 text-align:center;
 margin: 0;
 padding: 0;
-
-@media screen and (max-width:1400px){
-font-size:1.3rem;
-}
 `
 const ElementDesc = styled.p`
-font-size:1.5rem;
+font-size:0.7rem;
 font-weight:300;
 text-transform:uppercase;
 padding:0;
@@ -234,7 +231,4 @@ ${props =>
       display:none;
     `}
 
-@media only screen and (max-width:1400px){
-    font-size:1.3rem;
-}
 `

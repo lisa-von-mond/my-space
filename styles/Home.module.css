@@ -2,23 +2,6 @@
   padding: 0 2rem;
 }
 
-
-.header{
-  height:12rem;
-  width:100%;
-  z-index:100;
-  position:fixed;
-  top:0;
-  left:0;
-}
-
-@media only screen and (min-width:800px){
-  .header{
-    height:0;
-    z-index:100;
-  }
-  }
-
 .outer_main{
   display:flex;
   align-items:flex-start;
@@ -48,7 +31,7 @@
     padding: 12rem 0 3rem 0;
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:700px){
   .main{
     height: 96rem;
     width:34rem;
@@ -84,7 +67,7 @@
   }
   }
 
-@media only screen and (min-width:1600px){
+@media only screen and (min-width:1800px){
   .main{
       height: 62rem;
       width:89rem;
