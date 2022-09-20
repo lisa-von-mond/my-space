@@ -21,7 +21,6 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
         <link rel="icon" href="" />
       </Head>
 
-<ColourBackground spaceFilter={spaceFilter}/>
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
 <div className={styles.outer_main}>
