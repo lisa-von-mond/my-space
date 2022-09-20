@@ -23,12 +23,13 @@ export default function Kirindou() {
       <div className={pstyles.intro_pic}>
         <Image src={kirindou} alt="kirindou"></Image>
       </div>
-      <div className={pstyles.intro_text}>
-        <h1 className={pstyles.project_title}>Kirindou</h1>
-        <p className={pstyles.project_text}>Logo for mediation and conflict management startup</p>
+      <article className={pstyles.intro_text}>
+        <h2>Kirindou</h2>
+        <p className={pstyles.project_text}>The education officer Jan asked me to make a logo for his mediation and conflict management startup.</p>
+        <div className={pstyles.spacer}></div>
         <BackButton/>
     
-       </div>
+       </article>
       </div>
     
     </main>

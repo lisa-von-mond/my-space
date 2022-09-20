@@ -21,11 +21,12 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
       <div className={pstyles.intro_pic}>
-        <Image src={mfc} alt="mfc_poster"></Image>
+        <Image src={mfc} alt="mfc_poster" width="1100" height="1500"></Image>
       </div>
       <div className={pstyles.intro_text}>
           <h1 className={pstyles.project_title}>My favourite chords</h1>
-          <p className={pstyles.project_text}>Poster for a concert event of the Hamburg Indie Label MFC</p>
+          <p className={pstyles.project_text}>Poster for a mini festival of the Hamburg indie and punk Label My Favourite Chords</p>
+          <div className={pstyles.spacer}></div>
         <BackButton/>
        </div>
       </div>

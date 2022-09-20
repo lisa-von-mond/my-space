@@ -209,8 +209,9 @@ filter: grayscale(70%);
 border-radius: 100%;
 overflow:hidden;
 `
-const ElementTitle = styled.h2`
+const ElementTitle = styled.h3`
 font-size:0.7rem;
+letter-spacing: 0.1rem;
 font-weight:400;
 text-transform:uppercase;
 color:white;
@@ -220,6 +221,7 @@ padding: 0;
 `
 const ElementDesc = styled.p`
 font-size:0.7rem;
+letter-spacing: 0.1rem;
 font-weight:300;
 text-transform:uppercase;
 padding:0;

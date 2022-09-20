@@ -1,7 +1,7 @@
 .project_main {
   min-height: 100vh;
-  padding: 11rem 0.4rem 0.4rem 0.4rem;
-  flex: 1;
+  padding: 11rem 1.6rem 1.6rem 1.6rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,57 +10,63 @@
   z-index:999;
 }
 
-@media only screen and (min-width:800px){
+@media only screen and (min-width:1000px){
+  .project_main{
+    padding: 2rem
+  }
+}
+
+@media only screen and (min-width:1200px){
   .project_main{
     padding:10rem;
   }
 }
 
 .project_text {
-  line-height: 1.5;
-  font-size: 1.3rem;
+  line-height: 1.6rem;;
+  font-size: 1.2rem;
 }
 
-.project_title {
-  font-size: 2rem;
-  text-transform:uppercase;
+.spacer{
+  height: 3rem;
+}
+
+.button_wrapper{
+  display:flex;
+  gap: 2rem;
 }
 
 .intro {
 display:flex;
 justify-content:center;
 align-items:center;
-flex-direction:column;
+flex-direction:column-reverse;
 padding: 0;
 gap:3rem;
-}
+margin-bottom: 3rem;}
 
+
+@media only screen and (min-width:1000px){
+  .intro {
+    flex-direction:row;
+    margin-bottom: 6rem;
+    }  
+  }
+    
 .intro_text {
 width:100%;
 }
 
-.intro_pic {
-width:100%;
-}
-
-@media only screen and (min-width:1200px){
-.intro {
-  flex-direction:row;
-  padding: 2rem;
-  gap:2rem;
-  }  
-}
-
 .gallery {
+width: 100%;
 display:flex;
 flex-wrap:wrap;
-gap:4rem;
+gap:3rem;
 }
 
 @media only screen and (min-width:1200px){
 
 .gallery {
-padding: 6rem;
 gap:6rem;
 align-items:center;
 justify-content:center;

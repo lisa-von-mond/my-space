@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import kirindou from "../public/kirindou.jpg"
+import empowerment from "../public/empowerment.jpg"
 import { Header } from '../components/header'
 import { BackButton } from '../components/back-button'
 
@@ -20,12 +20,12 @@ export default function Kirindou() {
     <main className={pstyles.project_main}>
 
       <div className={pstyles.intro}>
-      <div className={pstyles.intro_pic}>
-      <Image src={kirindou} alt="kirindou"></Image>
-      </div>
+      <Image src={empowerment} alt="empowerment im CHemieunterricht"></Image>
+
       <div className={pstyles.intro_text}>
-          <h1 className={pstyles.project_title}>Empowerment im Chemieunterricht / empowerment in chemistry lesson</h1>
-          <p className={pstyles.project_text}>Logo for research project in science didactics</p>
+          <h2>Empowerment im Chemieunterricht / Empowerment in Chemistry Lesson</h2>
+          <p className={pstyles.project_text}>The research project of post-doc Lilith Rüschenpöhler seeks to develop a class concept for science didactic, that integrates thoughts about gender, social-economic status and migration . With the background of postcolonial and literature-based approached, the goal is to increase chances and reach more equality of opportunity in divers and heterogene classes.</p>
+          <div className={pstyles.spacer}></div>
           <BackButton/>
        </div>
       </div>

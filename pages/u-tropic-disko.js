@@ -2,9 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import flyer from "../public/flyer_os2.jpg"
-import front from "../public/flyer_os_front.jpg"
-import back from "../public/flyer_os_back.jpg"
+import utropic from "../public/utropic.gif"
+import utropic_ammonit from "../public/utropic disko_ammonit.jpg"
 import { Header } from '../components/header'
 import { BackButton } from '../components/back-button'
 
@@ -22,23 +21,18 @@ export default function RauschendeWolken() {
 
       <div className={pstyles.intro}>
 
-        <Image src={front} alt="open session flyer"></Image>
+        <Image src={utropic_ammonit} alt="utropic disko poster"></Image>
  
       <div className={pstyles.intro_text}>
-          <h2>female:pressure open session</h2>
-          <p className={pstyles.project_text}>Flyer for music and networking event of Hamburg female:pressure group</p>
-          <p className={pstyles.project_text}>female:pressure is a worldwide network of and for FLINTA* persons in electronic music and visual arts, with the goal to achieve more gender equality in these areas.</p>
-          <div className={pstyles.spacer}></div>
+          <h2>u*tropic disko</h2>
+          <p className={pstyles.project_text}>Poster + flyer for event series of political music collective in Zurich</p>
+     <div className={pstyles.spacer}></div>
           <BackButton/>
           <div className={pstyles.spacer}></div>
-          <Image src={back} alt="open session flyer"></Image>
+          <Image src={utropic} alt="utropic disko poster"></Image>
       </div>
       </div>
 
-      <div className={pstyles.gallery}>
-      <Image src={flyer} alt="open session flyer"></Image>
-    
-      </div>
     
     </main>
 

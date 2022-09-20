@@ -48,12 +48,5 @@ export const cardData = [
     pic:"/utropic_TEASER_mono.png",
     cat:[1,2],
     link:"u-tropic-disko"},
-
-    {id:7,
-    title:"Lisa von Mond",
-    desc:"website",
-    pic:"/lvm_TEASER_mono.png",
-    cat:[1,4],
-    link:""},
         
     ]
