@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
 import { PrettyElement } from '../components/element-component'
 import { cardData } from '../card-data'
 import { useState } from 'react'
-import styled from 'styled-components'
 import { ColourBackground } from '../components/colour-background'
 
 export default function Home() {
@@ -23,12 +21,14 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
         <link rel="icon" href="" />
       </Head>
 
-<ColourBackground spaceFilter={spaceFilter}/>
+      <ColourBackground spaceFilter={spaceFilter} />
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
+
+  
+
 
 <div className={styles.outer_main}>
       <main className={styles.main}>
-      
       {currentFilter.map((element, index)=>(
           <PrettyElement 
           title={element.title} 
@@ -41,8 +41,6 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           border={element.border}
           background={spaceFilter}
           indexx={index}/>))}
-
-
       </main>
       </div>
 

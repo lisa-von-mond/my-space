@@ -36,7 +36,7 @@ export const cardData = [
     link:"kirindou"},
 
     {id: 6,
-    title:"logo for didactis research project",
+    title:"logo for science didactic research project",
     desc: null,
     pic:"/empowerment_TEASER_mono.png",
     cat:[1,2],

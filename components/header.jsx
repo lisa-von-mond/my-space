@@ -20,7 +20,6 @@ return(
 
 }
 
-
 const FilterItem = styled.li`
 cursor:pointer;
 padding: 0.3rem;
@@ -29,7 +28,6 @@ border-radius:0.2rem;
 &:hover{
 background:black;
 color:white;
-
 }
 
 ${props =>
