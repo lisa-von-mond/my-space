@@ -10,7 +10,7 @@ export default function Kirindou() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Empowerment</title>
+        <title>Lisa Lu * logo for didactic research project</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>

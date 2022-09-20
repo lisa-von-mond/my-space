@@ -14,7 +14,7 @@ export default function RauschendeWolken() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>lush3000</title>
+        <title>Lisa Lu * lush3000</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
@@ -30,7 +30,6 @@ export default function RauschendeWolken() {
           <h1 className={pstyles.project_title}>LUSH3000</h1>
           <p className={pstyles.project_text}>lush:3000 gives an understanding of coding-principles in a playful way. As environmental activist of the future, your task is shipping resources from planets to the next. Program your route in a way so that energy supplies are used consciously and the system will not crash.</p>
           <p className={pstyles.project_text}>The game is my capstone project of neue fische web development bootcamp, that I absolved 2022.</p>
-          <a href="https://lush3000.vercel.app" target="blank" rel="noopener"><p className={pstyles.project_text}>see deployment here</p></a>
        <BackButton/>
       </div>
       </div>

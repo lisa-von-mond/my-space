@@ -5,7 +5,6 @@ import { gridMatrix } from "../grid-matrix";
 import { useState } from "react";
 import Image from "next/image";
 
-
 export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background, id}){
 
 const [isVisible, setIsVisible] = useState(false)

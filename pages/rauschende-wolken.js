@@ -18,7 +18,7 @@ export default function RauschendeWolken() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Lisa Lu * design research Project</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>

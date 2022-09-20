@@ -1,8 +1,8 @@
 export const cardData = [
 
     {id: 1,
-    title:"my favourite chords",
-    desc:"poster",
+    title:"poster for indie label event",
+    desc:null,
     pic:"/mfc_TEASER_mono.png",
     cat:[1,3],
     link:"mfc"},
@@ -54,6 +54,6 @@ export const cardData = [
     desc:"website",
     pic:"/lvm_TEASER_mono.png",
     cat:[1,4],
-    link:"/"},
+    link:""},
         
     ]

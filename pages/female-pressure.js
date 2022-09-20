@@ -12,7 +12,7 @@ export default function RauschendeWolken() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>female:pressure flyer</title>
+        <title>Lisa Lu * female:pressure flyer</title>
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
