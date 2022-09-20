@@ -5,9 +5,9 @@ import { gridMatrix } from "../grid-matrix";
 import { useState } from "react";
 import Image from "next/image";
 
-export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background, id}){
+export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background}){
 
-const [isVisible, setIsVisible] = useState(false)
+const [isVisible, setIsVisible] = useState("false")
 
 const elementVariants = {
         offscreen: {
@@ -27,12 +27,12 @@ const rowD = thisElement.rowd
 const colT = thisElement.colt
 const rowT = thisElement.rowt
 
-    return(
-    <Link href={`/${link}`}>
+return(
+<Link href={`/${link}`}>
     
     <ElementFrame cold={colD} rowd={rowD} colt={colT} rowt={rowT} border={border}
-        onMouseEnter={() => setIsVisible(true)}
-        onMouseLeave={() => setIsVisible(false)}>
+        onMouseEnter={() => setIsVisible("true")}
+        onMouseLeave={() => setIsVisible("false")}>
 
         <ElementPic>
             <Image src={pic} width="600" height="600" alt="mfc_teaser"></Image>
@@ -163,7 +163,7 @@ padding: 0.5rem;
 border-radius:0.5rem;
 
 ${props =>
-    props.visible === true &&
+    props.visible === "true" &&
     css`
     opacity:100;
     animation: fade 1s;

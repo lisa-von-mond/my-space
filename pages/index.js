@@ -32,7 +32,6 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           title={element.title} 
           desc={element.desc}
           pic={element.pic}
-          id={element.id}
           link={element.link}
           key={element.title}
           lengthx={currentFilter.length}

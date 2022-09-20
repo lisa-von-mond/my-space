@@ -8,9 +8,6 @@ import schnecke from "../public/schnecke.jpg"
 import schnecke2 from "../public/schnecke2.jpg"
 import wolke from "../public/wolke.jpg"
 import moos from "../public/moos.jpg"
-import karogif from "../public/karo4gif.gif"
-import karogif2 from "../public/karo4gif2.gif"
-import Link from 'next/link'
 import { Header } from '../components/header'
 import { BackButton } from '../components/back-button'
 
