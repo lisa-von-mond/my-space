@@ -20,7 +20,8 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
         <meta name="lisa's portfolio" content="" />
         <link rel="icon" href="" />
       </Head>
-
+      
+      <ColourBackground spaceFilter={spaceFilter} />
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
 <div className={styles.outer_main}>

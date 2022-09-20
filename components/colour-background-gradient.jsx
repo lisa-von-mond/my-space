@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export function ColourBackground({spaceFilter}){
+export function ColourBackgroundGradient({spaceFilter}){
 
   const myvariants = {
     one: { opacity: 1 },
@@ -52,7 +52,7 @@ position:fixed;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: skyblue;
+background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 `
 const BGpink = styled.div`
 height: 120vh;
@@ -60,7 +60,7 @@ width:120vw;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: pink;
+background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
 `
 
 const BGpurple = styled.div`
@@ -69,7 +69,7 @@ width:120vw;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: #cc8eff;
+background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 `
 const BGcyan = styled.div`
 height: 120vh;
@@ -77,5 +77,5 @@ width:120vw;
 position:fixed;
 top:-10vh;
 left:-10vw;
-background: #9bffed
+background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
 `
