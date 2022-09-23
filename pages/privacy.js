@@ -19,8 +19,8 @@ return(
 
 <Header/>
 
-    <div className={styles.outer_main_text}>
-        <main>
+    <main className={styles.outer_main_text}>
+        
 
         <h2>Allgemeine Datenschutzhinweise</h2>
 
@@ -64,7 +64,7 @@ return(
         </ul>
 
         <p>Webseiten können die sogenannten Cookies verwenden. Diese stellen für Sie oder Ihren Computer keine Bedrohung dar. Cookies verbessern die Funktionalität einer Webseite. Das Ziel dieser Cookies ist die Verbesserung der User Experience. Cookies sind Dateien, die auf der Festplatte Ihres Computers von einem Internetbrowser gespeichert und gelesen werden können.</p>
-        <p>Am häufigsten werden die sogenannten "Session Cookies" verwendet. Diese bleiben bestehen solange Sie die Webseite besuchen. Andere Cookies werden solange existieren, bis diese manuell gelöscht werden oder ablaufen. Mit Hilfe von diesen Cookies kann man z.B. wiedererkennen, dass sie nochmals die Webseite besuchen.</p>
+        <p>Am häufigsten werden die sogenannten &quot;Session Cookies&quot; verwendet. Diese bleiben bestehen solange Sie die Webseite besuchen. Andere Cookies werden solange existieren, bis diese manuell gelöscht werden oder ablaufen. Mit Hilfe von diesen Cookies kann man z.B. wiedererkennen, dass sie nochmals die Webseite besuchen.</p>
 
         <p>User können im Browser das automatische Setzen von Cookies deaktivieren und vor dem Speichern von Cookies jeweils eine Zustimmung erteilen. Man kann ebenfalls das Speichern von Cookies nur für bestimmte Webseiten erlauben und automatisiert alle Cookies beim Schließen des Internetbrowsers löschen. Sobald diese Einstellungen aktiviert werden, können Sie in der Bedienung der Webseite eingeschränkt sein.</p>
 
@@ -77,9 +77,8 @@ return(
 
         <p>Sie haben das Recht auf Auskunft über die Daten, welche zu Ihrer Person gespeichert wurden. Sie können ebenfalls jederzeit die Löschung bzw. die Änderung dieser Daten beantragen.</p>
         <BackButton/>
-        </main>   
 
-    </div>
+    </main>
 <Footer/>
 </div>
       

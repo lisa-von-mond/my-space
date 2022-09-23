@@ -5,14 +5,14 @@ export function Footer({}){
 return(
 
 <MyFooter>
-    <Link href="/">
+    <Link href="/about">
     <FooterElement>ABOUT</FooterElement>
     </Link>
-    <Link href="/">
+    <Link href="mailto:lisalue@posteo.de">
     <FooterElement>CONTACT</FooterElement>
     </Link>
     <FooterElement>●</FooterElement>
-    <Link href="/">
+    <Link href="/legal">
     <FooterElement>LEGAL</FooterElement>
     </Link>
     <Link href="/privacy">

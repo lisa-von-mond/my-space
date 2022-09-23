@@ -18,7 +18,7 @@ const BackToStartButton = styled.button`
   font-size:1.2rem;
   padding: 0.5rem;
   text-transform:uppercase;
-  background:none
+  background:none;
   box-shadow:none;
   border:none;
   border-radius: 10px;
