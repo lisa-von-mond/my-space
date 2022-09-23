@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { gridMatrix } from "../grid-matrix";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import Image from "next/image";
 
 export function PrettyElement({title, desc, pic, link, border, lengthx, indexx, background}){
@@ -63,17 +63,15 @@ return(
 
 const ElementFrame = styled.div`
 
-
     height:13rem;
     width: 13rem;
-  aspect-ratio:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  align-content:center;
-  cursor:pointer;
-  position:relative;
-
+    aspect-ratio:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    cursor:pointer;
+    position:relative;
 
 
 @media only screen and (min-width:700px){
@@ -109,63 +107,60 @@ const ElementFrame = styled.div`
 const ElementTextScroll = styled.div`
   
     position: absolute;
-    width: auto;
-    height: auto;
-    top:-2rem;
+    height:100%;
+    width:100%;
+    top:40%;
+    right: 20%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    gap:0.5rem;
+    opacity:0;
+    padding: 0.5rem;
+    border-radius:50%;
+    display:none;
+
+
+${props =>
+    props.background === 1 &&
+    css`
+    background-colour: royalblue;
+`}
+
+${props =>
+    props.background === 2 &&
+    css`
+    background-colour: darkviolet;
+`}
+
+${props =>
+    props.background === 3 &&
+    css`
+    background-colour: indigo;
+`}
+
+${props =>
+    props.background === 4 &&
+    css`
+    background-colour: teal;
+`}
+
+`
+const ElementTextHover = styled.div`
+  
+    position: absolute;
+    top:2rem;
     right: 3rem;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:space-between;
     gap:0.5rem;
-    background:black;
     opacity:0;
     padding: 0.5rem;
     border-radius:0.5rem;
-
-@media(hover:hover){
-    display:none;
-}
-
-${props =>
-    props.background === 1 &&
-    css`
-    background: teal;
-`}
-
-${props =>
-    props.background === 2 &&
-    css`
-    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
-`}
-
-${props =>
-    props.background === 3 &&
-    css`
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-`}
-
-${props =>
-    props.background === 4 &&
-    css`
-    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
-`}
-
-`
-const ElementTextHover = styled.div`
-  
-position: absolute;
-top:2rem;
-right: 3rem;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:space-between;
-gap:0.5rem;
-background: blue;
-opacity:0;
-padding: 0.5rem;
-border-radius:0.5rem;
+    color:white;
 
 ${props =>
     props.visible === "true" &&
@@ -203,38 +198,35 @@ ${props =>
 `}
 `
 const ElementPic = styled.div`
-width:100%;
-height:100%;
-filter: grayscale(70%);
-border-radius: 100%;
-overflow:hidden;
+    width:100%;
+    height:100%;
+    filter: grayscale(70%);
+    border-radius: 100%;
+    overflow:hidden;
 `
 const ElementTitle = styled.h3`
-font-size:0.7rem;
-letter-spacing: 0.1rem;
-font-weight:400;
-text-transform:uppercase;
-color:white;
-text-align:center;
-margin: 0;
-padding: 0;
+    font-size:0.7rem;
+    letter-spacing: 0.1rem;
+    font-weight:400;
+    text-transform:uppercase;
+    text-align:center;
+    margin: 0;
+    padding: 0;
 `
 const ElementDesc = styled.p`
-font-size:0.7rem;
-letter-spacing: 0.1rem;
-font-weight:300;
-text-transform:uppercase;
-padding:0;
-margin:0;
-text-align:center;
-color:white;
-margin: 0;
-padding: 0;
+    font-size:0.7rem;
+    letter-spacing: 0.1rem;
+    font-weight:300;
+    text-transform:uppercase;
+    padding:0;
+    margin:0;
+    text-align:center;
+    margin: 0;
+    padding: 0;
 
 ${props =>
     props.desc === null &&
     css`
       display:none;
     `}
-
 `

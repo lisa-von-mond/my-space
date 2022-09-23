@@ -1,7 +1,8 @@
 import styled, {css} from 'styled-components'
 import Link from 'next/link'
 
-export function Header({spaceFilter, setSpaceFilter, menu}){
+
+export function Header({setViewElements, spaceFilter, setSpaceFilter, menu}){
 
 return(
 

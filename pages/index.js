@@ -5,6 +5,8 @@ import { PrettyElement } from '../components/element-component'
 import { cardData } from '../card-data'
 import { useState } from 'react'
 import { ColourBackground } from '../components/colour-background'
+import { motion, AnimatePresence } from "framer-motion";
+import { Footer } from '../components/footer'
 
 export default function Home() {
 
@@ -13,7 +15,7 @@ const [spaceFilter, setSpaceFilter] = useState(1)
 const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilter) === true))
 
   return (
-    <div className={styles.container}>
+  <div className={styles.container}>
 
       <Head>
         <title>Lisa Lu * portfolio</title>
@@ -26,6 +28,7 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
 
   
 <div className={styles.outer_main}>
+ 
       <main className={styles.main}>
       {currentFilter.map((element, index)=>(
           <PrettyElement 
@@ -39,8 +42,9 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           background={spaceFilter}
           indexx={index}/>))}
       </main>
-      </div>
-    </div>
+
+  </div>
+  <Footer/>
+</div>
   )
 }
-
