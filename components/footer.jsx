@@ -12,9 +12,6 @@ return(
     <FooterElement>CONTACT</FooterElement>
     </Link>
     <FooterElement>●</FooterElement>
-    <Link href="/legal">
-    <FooterElement>LEGAL</FooterElement>
-    </Link>
     <Link href="/privacy">
     <FooterElement>PRIVACY</FooterElement>
     </Link>

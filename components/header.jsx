@@ -8,7 +8,7 @@ return(
 
 <HeaderFrame>
 <Link href="/">
-<Lisa>LISA LU</Lisa>
+<Lisa>LISA LUE</Lisa>
 </Link>
 <FilterMenu menu={menu}>
     <FilterItem state="1" current={spaceFilter} onClick={() => setSpaceFilter(1)}>all</FilterItem>
