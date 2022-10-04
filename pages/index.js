@@ -10,7 +10,6 @@ import { Footer } from '../components/footer'
 
 export default function Home() {
 
-function reloadMe(){window.location.reload();}
 
 const [spaceFilter, setSpaceFilter] = useState(1)
 
@@ -21,12 +20,13 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      duration: 2
+      duration: 1
     }
   }
 }
 
   return (
+
   <div className={styles.container}>
 
       <Head>
@@ -36,6 +36,7 @@ const container = {
       </Head>
 
       <ColourBackground spaceFilter={spaceFilter} />
+
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
   
@@ -61,6 +62,7 @@ const container = {
 
   </main>
   <Footer/>
+
 </div>
   )
 }
