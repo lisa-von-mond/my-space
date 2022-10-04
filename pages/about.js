@@ -26,7 +26,6 @@ return(
 
         <p>Lisa is a Junior Web Developer with a background on transdisciplinary design and media science.</p>
 
-        
         <BackButton/>
         </main>   
 

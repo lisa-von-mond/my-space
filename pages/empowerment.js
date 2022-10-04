@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import pstyles from '../styles/Project.module.css'
-import empowerment from "../public/empowerment-logo.jpg"
+import empowerment from "../public/empowerment-logo.png"
 import { Header } from '../components/header'
 import { BackButton } from '../components/back-button'
 

@@ -3,16 +3,28 @@ import styles from '../styles/Home.module.css'
 import { Header } from '../components/header'
 import { PrettyElement } from '../components/element-component'
 import { cardData } from '../card-data'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ColourBackground } from '../components/colour-background'
 import { motion, AnimatePresence } from "framer-motion";
 import { Footer } from '../components/footer'
 
 export default function Home() {
 
+function reloadMe(){window.location.reload();}
+
 const [spaceFilter, setSpaceFilter] = useState(1)
 
 const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilter) === true))
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      duration: 2
+    }
+  }
+}
 
   return (
   <div className={styles.container}>
@@ -27,9 +39,13 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
   
-<div className={styles.outer_main}>
+<main className={styles.outer_main}>
  
-      <main className={styles.main}>
+      <motion.div className={styles.main}
+      
+      variants={container}
+      initial="hidden"
+      animate="show">
       {currentFilter.map((element, index)=>(
           <PrettyElement 
           title={element.title} 
@@ -41,9 +57,9 @@ const currentFilter = cardData.filter((element)=>(element.cat.includes(spaceFilt
           border={element.border}
           background={spaceFilter}
           indexx={index}/>))}
-      </main>
+      </motion.div>
 
-  </div>
+  </main>
   <Footer/>
 </div>
   )
