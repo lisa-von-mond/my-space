@@ -24,7 +24,7 @@ export default function Kirindou() {
 
       <div className={pstyles.intro_text}>
           <h2>Empowerment im Chemieunterricht / Empowerment in Chemistry Lesson</h2>
-          <p className={pstyles.project_text}>The research project of post-doc Lilith Rüschenpöhler seeks to develop a class concept for science didactic, that integrates thoughts about gender, social-economic status and migration . With the background of postcolonial and literature-based approached, the goal is to increase chances and reach more equality of opportunity in divers and heterogene classes.</p>
+          <p className={pstyles.project_text}>The research project of post-doc Lilith Rüschenpöhler seeks to develop a class concept for science didactic, that integrates differences of gender, social-economic status and migration. With the background of postcolonial and literature-based approaches, the goal is to increase chances and reach more equality of opportunity in divers and heterogene classes.</p>
           <div className={pstyles.spacer}></div>
           <BackButton/>
        </div>
