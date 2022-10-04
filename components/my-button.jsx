@@ -15,8 +15,8 @@ return(
 
 const ThisButton = styled.button`
 
-  font-size:1.2rem;
-  padding: 0.5rem;
+  font-size:0.8rem;
+  padding: 0.4rem;
   text-transform:uppercase;
   background:none
   box-shadow:none;

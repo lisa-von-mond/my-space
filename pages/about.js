@@ -23,8 +23,13 @@ return(
         <main>
 
         <h2>About</h2>
+        <div className={styles.smallspacer}></div>
+        <p>Lisa is a Junior Web Developer with a background on transdisciplinary design and culture &#47; media science.</p>
 
-        <p>Lisa is a Junior Web Developer with a background on transdisciplinary design and media science.</p>
+        <p><a href="https://github.com/lisa-von-mond" target="blank">↗ github</a></p>
+        <p><a href="https://www.linkedin.com/in/lisa-luetkefedder/" target="blank">↗ linkedin</a></p>
+
+        <div className={styles.smallspacer}></div>
 
         <BackButton/>
         </main>   
