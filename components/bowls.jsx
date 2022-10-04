@@ -1,22 +1,42 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export function Bowls(){
 
+    const wrapper = {
+        hidden: { opacity: 0 },
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.3
+          }
+        }
+      }
+
+      const bowl = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 }
+      }
+
 return(
     <BowlBg>
-      <BowlWrapper>
-            <OneBowl gridrow="1" gridcol="3"></OneBowl>
-            <OneBowl gridrow="2" gridcol="4"></OneBowl>
-            <OneBowl gridrow="3" gridcol="5"></OneBowl>
-            <OneBowl gridrow="5" gridcol="5"></OneBowl>
-            <OneBowl gridrow="7" gridcol="5"></OneBowl>
-            <OneBowl gridrow="8" gridcol="4"></OneBowl>
-            <OneBowl gridrow="9" gridcol="3"></OneBowl>
-            <OneBowl gridrow="8" gridcol="2"></OneBowl>
-            <OneBowl gridrow="7" gridcol="1"></OneBowl>
-            <OneBowl gridrow="5" gridcol="1"></OneBowl>
-            <OneBowl gridrow="3" gridcol="1"></OneBowl>
-            <OneBowl gridrow="2" gridcol="2"></OneBowl>
+      <BowlWrapper as={motion.div}
+       variants={wrapper}
+       initial="hidden"
+       animate="show"
+      >
+            <OneBowl as={motion.div} gridrow="1" gridcol="3" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="2" gridcol="4" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="3" gridcol="5" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="5" gridcol="5" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="7" gridcol="5" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="8" gridcol="4" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="9" gridcol="3" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="8" gridcol="2" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="7" gridcol="1" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="5" gridcol="1" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="3" gridcol="1" variants={bowl}></OneBowl>
+            <OneBowl as={motion.div} gridrow="2" gridcol="2" variants={bowl}></OneBowl>
       </BowlWrapper>
     </BowlBg>
 
@@ -41,7 +61,6 @@ grid-template-rows: repeat(9, 1rem);
 grid-template-columns: repeat(5, 2rem);
 row-gap: 0.24rem;
 column-gap: 0.2rem;
-
 `
 
 const OneBowl = styled.div`
