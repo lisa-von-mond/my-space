@@ -7,10 +7,11 @@ import { useState, useEffect } from 'react'
 import { ColourBackground } from '../components/colour-background'
 import { motion, AnimatePresence } from "framer-motion";
 import { Footer } from '../components/footer'
+import { Bowls } from '../components/bowls'
 
 export default function Home() {
 
-function reloadMe(){window.location.reload();}
+
 
 const [spaceFilter, setSpaceFilter] = useState(1)
 
@@ -27,6 +28,7 @@ const container = {
 }
 
   return (
+
   <div className={styles.container}>
 
       <Head>
@@ -36,6 +38,7 @@ const container = {
       </Head>
 
       <ColourBackground spaceFilter={spaceFilter} />
+
       <Header spaceFilter={spaceFilter} setSpaceFilter={setSpaceFilter} menu={true}/>
 
   
@@ -61,6 +64,7 @@ const container = {
 
   </main>
   <Footer/>
+  <Bowls/>
 </div>
   )
 }
