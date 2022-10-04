@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export function Bowls(){
+export function Loader(){
 
     const wrapper = {
         hidden: { opacity: 0 },
@@ -19,7 +19,7 @@ export function Bowls(){
       }
 
 return(
-    <BowlBg>
+    <LoaderBg>
       <BowlWrapper as={motion.div}
        variants={wrapper}
        initial="hidden"
@@ -38,12 +38,12 @@ return(
             <OneBowl as={motion.div} gridrow="3" gridcol="1" variants={bowl}></OneBowl>
             <OneBowl as={motion.div} gridrow="2" gridcol="2" variants={bowl}></OneBowl>
       </BowlWrapper>
-    </BowlBg>
+    </LoaderBg>
 
 )
 }
 
-const BowlBg = styled.div`
+const LoaderBg = styled.div`
 height: 110vh;
 width: 110vw;
 position: fixed;

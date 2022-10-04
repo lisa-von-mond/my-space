@@ -7,10 +7,8 @@ import { useState, useEffect } from 'react'
 import { ColourBackground } from '../components/colour-background'
 import { motion, AnimatePresence } from "framer-motion";
 import { Footer } from '../components/footer'
-import { Bowls } from '../components/bowls'
 
 export default function Home() {
-
 
 
 const [spaceFilter, setSpaceFilter] = useState(1)
@@ -22,7 +20,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      duration: 2
+      duration: 1
     }
   }
 }
@@ -64,7 +62,7 @@ const container = {
 
   </main>
   <Footer/>
-  <Bowls/>
+
 </div>
   )
 }
